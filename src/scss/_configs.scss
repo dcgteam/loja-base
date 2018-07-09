@@ -2,10 +2,12 @@
 $base-color: #0A7ACA;
 $darken-color: darken( $base-color, 10% );
 $lighten-color: lighten($base-color, 10%);
-
+$font-dark: #555555;
+$font-light: #000;
 
 /* fonts */
 $font-family: Arial, Helvetica, Sans-serif;
+$font-size: 14px;
 
 /* structure */
 $wrapper: 1180px;

@@ -1,0 +1,26 @@
+{
+  "name": "generator",
+  "version": "0.0.0",
+  "authors": [
+    "Alexander Chu <webchu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.5",
+    "handlebars": "~4.0.5",
+    "knockout": "~3.4.0",
+    "normalize-css": "~4.0.0",
+    "neat": "~1.7.4"
+  },
+  "devDependencies": {
+    "bourbon": "~4.2.5",
+    "bootstrap": "~3.3.5"
+  }
+}

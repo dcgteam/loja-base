@@ -1,0 +1,57 @@
+.btn {
+	outline: none;
+    background-color: $base-color;
+    color: $font-light;
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    padding: 1em 2em;
+    line-height: 1em;
+    display: inline-block;
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+    -webkit-transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
+    -moz-transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
+    transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
+    border-bottom: none;
+    border-bottom-color: $lighten-color;
+    &:hover, &.btn-hover {
+    	text-decoration: none;
+	    color: $font-light;
+	    background-color: $lighten-color;
+	    border-bottom-color: $base-color;
+    }
+    &.btn-small {
+    	padding: 0.7em 1em;
+    	font-size: 0.75rem;
+    }
+	&.btn-outline {
+		&:active {
+			background: #dbdbdb;
+    		color: $base-color;
+		}
+		&:hover {
+		    background: #f4f4f4;
+		    color: $base-color;
+		}
+	}
+	&.btn-big {
+		font-size: 1.125rem;
+    	line-height: 1.2em;
+	}
+	&.btn-huge {
+		font-size: 1.625rem;
+	}
+	&.btn-wide {
+	    width: 100%;
+	    text-align: center;
+	}
+	&[disabled] {
+		background-color: $font-dark;
+	    font-weight: 500;
+	    color: #888888;
+	    border-bottom-color: #4d4d4d;
+	}
+}

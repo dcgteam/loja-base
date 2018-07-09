@@ -1,0 +1,125 @@
+body {
+	font-family: $font-family;
+	font-size: $font-dark;
+	color: $font-dark;
+	margin: 0;
+    padding: 0;
+	a {
+		text-decoration: none;
+		color: $base-color;
+	}
+	ul {
+		margin: 0;
+		padding: 0; 
+		list-style: none; 
+	}
+	ul, ol {
+		li {
+			margin-top: 10px;
+   			margin-bottom: 10px;
+		}
+	}
+	h1 {
+		font-size: 30px;
+		small {
+			font-size: 28px;
+		}
+	}
+	h2 {
+		font-size: 25px;
+		small {
+			font-size: 22px;
+		}
+	}
+	h3 {
+		font-size: 20px;
+		small {
+			font-size: 16px;
+		}
+	}
+	h4 {
+		font-size: 18px;
+		small {
+			font-size: 14px;
+		}
+	}
+	h5 {
+		font-size: 14px;
+		small {
+			font-size: 12px;
+		}
+	}
+	h6 {
+		font-size: 12px;
+		small {
+			font-size: 12px;
+		}
+	}
+	h1,h2,h3,h4,h5 {
+		margin-bottom: 15px;
+   		margin-top: 10px;
+	}
+	p {
+		line-height: 1.6em;
+	    margin-top: 0;
+	    margin-bottom: 1.2em;
+	}
+	figure {
+		margin: 0;
+	}
+	fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.wrapper {
+		width: $wrapper;
+		max-width: $wrapper!important;
+		position: relative;
+		margin: 0 auto;
+		.row {
+			width: 100%;
+    		float: none;
+		}
+	}	
+	button {
+		cursor: pointer;
+	}
+	table {
+		thead th,
+		tbody td,
+		tfoot td {
+			border-bottom: 1px solid #EEE;
+			padding: 0.5em 0!important;
+		}
+		thead {
+			th {
+				text-transform: uppercase;
+				text-align: left;
+				font-size: 0.8em;
+				color: gray;
+			}
+		}
+		tbody {
+			tr {
+				&:last-child {
+					td {
+						border-bottom: none;
+					}
+				}
+				td {
+				}
+				&:hover {
+					td {
+					}
+				}
+			}
+		}
+		tfoot {
+
+		}
+	}
+	.hide {
+		display: none;
+	}
+}
