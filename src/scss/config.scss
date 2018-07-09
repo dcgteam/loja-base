@@ -1,0 +1,13 @@
+/* colors */
+$base-color: #0A7ACA;
+$darken-color: darken( $base-color, 10% );
+$lighten-color: lighten($base-color, 10%);
+
+
+/* fonts */
+$font-family: Arial, Helvetica, Sans-serif;
+
+/* structure */
+$wrapper: 1180px;
+$list-product-width: 23.68%;
+
