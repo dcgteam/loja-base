@@ -1,6 +1,6 @@
 body {
 	font-family: $font-family;
-	font-size: $font-dark;
+	font-size: $font-size;
 	color: $font-dark;
 	margin: 0;
     padding: 0;
@@ -20,39 +20,39 @@ body {
 		}
 	}
 	h1 {
-		font-size: 30px;
+		font-size: 2.1em;
 		small {
-			font-size: 28px;
+			font-size: 0.5em;
 		}
 	}
 	h2 {
-		font-size: 25px;
+		font-size: 1.8em;
 		small {
-			font-size: 22px;
+			font-size: 0.5em;
 		}
 	}
 	h3 {
-		font-size: 20px;
+		font-size: 1.6em;
 		small {
-			font-size: 16px;
+			font-size: 0.8em;
 		}
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 1.3em;
 		small {
-			font-size: 14px;
+			font-size: 0.9em;
 		}
 	}
 	h5 {
-		font-size: 14px;
+		font-size: 1em;
 		small {
-			font-size: 12px;
+			font-size: 1em;
 		}
 	}
 	h6 {
-		font-size: 12px;
+		font-size: 0.9em;
 		small {
-			font-size: 12px;
+			font-size: 0.9em;
 		}
 	}
 	h1,h2,h3,h4,h5 {
@@ -60,7 +60,7 @@ body {
    		margin-top: 10px;
 	}
 	p {
-		line-height: 1.6em;
+		line-height: 1em;
 	    margin-top: 0;
 	    margin-bottom: 1.2em;
 	}
@@ -72,16 +72,6 @@ body {
 		margin: 0;
 		padding: 0;
 	}
-	.wrapper {
-		width: $wrapper;
-		max-width: $wrapper!important;
-		position: relative;
-		margin: 0 auto;
-		.row {
-			width: 100%;
-    		float: none;
-		}
-	}	
 	button {
 		cursor: pointer;
 	}

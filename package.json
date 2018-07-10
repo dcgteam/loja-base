@@ -33,6 +33,7 @@
     "gulp.spritesmith": "^6.2.1"
   },
   "dependencies": {
+    "bourbon-neat": "^3.0.0",
     "gulp-sass": "^4.0.1"
   }
 }

@@ -29,11 +29,11 @@
     }
 	&.btn-outline {
 		&:active {
-			background: #dbdbdb;
+			background: tint($font-dark, 60%);
     		color: $base-color;
 		}
 		&:hover {
-		    background: #f4f4f4;
+		    background: tint($font-dark, 90%);
 		    color: $base-color;
 		}
 	}
@@ -51,7 +51,7 @@
 	&[disabled] {
 		background-color: $font-dark;
 	    font-weight: 500;
-	    color: #888888;
-	    border-bottom-color: #4d4d4d;
+	    color: tint($font-dark, 40%);
+	    border-bottom-color: tint($font-dark, 10%);
 	}
 }

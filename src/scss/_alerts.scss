@@ -4,23 +4,23 @@
     border: 1px solid transparent;
     display: block;
     &.alert-success {
-    	color: #3c763d;
-	    background-color: #dff0d8;
-	    border-color: #cbe4bf;
+    	color: darken( $alert-success, 30% );
+        background-color: $alert-success;
+        border-color: darken( $alert-success, 20% );
     }
     &.alert-info {
-    	color: #31708f;
-	    background-color: #d9edf7;
-	    border-color: #bce8f1;
+    	color: darken( $alert-info, 30% );
+	    background-color: $alert-info;
+	    border-color: darken( $alert-info, 20% );
     }
     &.alert-warning {
-    	color: #8a6d3b;
-	    background-color: #fcf8e3;
-	    border-color: #faebcc;
+    	color: darken( $alert-warning, 30% );
+        background-color: $alert-warning;
+        border-color: darken( $alert-warning, 20% );
     }
     &.alert-danger {
-    	color: #a94442;
-	    background-color: #f2dede;
-	    border-color: #ebccd1;
+        color: darken( $alert-danger, 30% );
+        background-color: $alert-danger;
+        border-color: darken( $alert-danger, 20% );
     }
 }    

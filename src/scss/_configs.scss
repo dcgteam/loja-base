@@ -1,15 +1,24 @@
-/* colors */
+// colors
 $base-color: #0A7ACA;
 $darken-color: darken( $base-color, 10% );
 $lighten-color: lighten($base-color, 10%);
-$font-dark: #555555;
+$font-dark: #444444;
 $font-light: #000;
 
-/* fonts */
+// alerts
+$alert-success: #dff0d8;
+$alert-info: #d9edf7;
+$alert-warning:#fcf8e3;
+$alert-danger:#faebcc;
+
+// fonts 
 $font-family: Arial, Helvetica, Sans-serif;
 $font-size: 14px;
 
-/* structure */
+// structure
 $wrapper: 1180px;
-$list-product-width: 23.68%;
+// quantidade de produtos em listagens -- geral
+$qtd-products: 4;
+// quantidade de produtos na vitrine especial -- nome e preco ao lado 
+$special-qtd-products: 2;
 

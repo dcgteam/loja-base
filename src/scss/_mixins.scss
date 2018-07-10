@@ -21,10 +21,7 @@
     border-top-right-radius: $radius;
     border-bottom-right-radius: $radius;
 }
-@mixin clearfix() {
-  &::after {
-    display: block;
-    clear: both;
-    content: "";
-  }
+@mixin wrapper-width($width: $wrapper) {
+  width: $width;
+  max-width: $width;
 }

@@ -2,7 +2,7 @@
   "name": "generator",
   "version": "0.0.0",
   "authors": [
-    "Alexander Chu <webchu@gmail.com>"
+    "Luiza Haas <luizahaas2@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -14,10 +14,8 @@
   ],
   "dependencies": {
     "bourbon": "~4.2.5",
-    "handlebars": "~4.0.5",
-    "knockout": "~3.4.0",
     "normalize-css": "~4.0.0",
-    "neat": "~1.7.4"
+    "neat": "~3.0.0"
   },
   "devDependencies": {
     "bourbon": "~4.2.5",
