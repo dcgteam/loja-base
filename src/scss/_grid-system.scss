@@ -9,7 +9,7 @@ $custom-neat-grid-small: (
 
 
 
-.wrapper {
+.wrapper, .grid-products #middle {
 	@include grid-container;
 	position: relative;
 	margin: 0 auto;
@@ -19,12 +19,12 @@ $custom-neat-grid-small: (
 	}
 }	
 @media screen and (min-width: $wrapper) {
-	.wrapper {
+	.wrapper, .grid-products #middle {
 		@include wrapper-width();
 	}
 }
 @media screen and (max-width: ($wrapper - 1px)) {
-	.wrapper {
+	.wrapper, .grid-products #middle {
 		@include wrapper-width(100%);
 	}	
 }
@@ -109,6 +109,9 @@ $custom-neat-grid-small: (
 	}
 	&.col-12 {
 		@include grid-column(12);
+		margin-left: 0;
+	}
+	&:first-child {
 		margin-left: 0;
 	}
 }

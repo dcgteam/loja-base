@@ -4,9 +4,63 @@ body {
 	color: $font-dark;
 	margin: 0;
     padding: 0;
+    #footer, #header, #middle {
+	    min-width: auto;
+	}
 	a {
 		text-decoration: none;
 		color: $base-color;
+		&:active {
+			color: darken( $base-color, 20% );
+    		text-decoration: none;
+		}
+		&:hover {
+			color: darken( $base-color, 20% );
+    		text-decoration: underline;
+		}
+	}
+	input[type="color"],
+	input[type="date"], 
+	input[type="email"], 
+	input[type="number"], 
+	input[type="password"], 
+	input[type="tel"], 
+	input[type="text"], 
+	textarea, 
+	select, {
+		display: block;
+	    width: 100%;
+	    height: 42px;
+	    padding: 6px 12px;
+	    box-sizing: border-box;
+	    color: $font-dark;
+	    background-color: #fff;
+	    background-image: none;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	}
+	input[type=checkbox],
+	input[type=radio] {
+		width: 15px;
+		height: 15px;
+	    position: relative;
+	    top: 3px;
+	}
+	.input-group, .input-wrapper {
+		margin-bottom: 15px;
+		label {
+			display: inline-block;
+		    margin-bottom: 5px;
+		    margin-top: 9px;
+		    font-weight: bold;
+		    vertical-align: top;
+		    font-size: 0.97em;
+		}
 	}
 	ul {
 		margin: 0;
@@ -22,13 +76,13 @@ body {
 	h1 {
 		font-size: 2.1em;
 		small {
-			font-size: 0.5em;
+			font-size: 0.7em;
 		}
 	}
 	h2 {
 		font-size: 1.8em;
 		small {
-			font-size: 0.5em;
+			font-size: 0.7em;
 		}
 	}
 	h3 {
@@ -55,12 +109,12 @@ body {
 			font-size: 0.9em;
 		}
 	}
-	h1,h2,h3,h4,h5 {
+	h1,h2,h3,h4,h5,h6 {
 		margin-bottom: 15px;
    		margin-top: 10px;
 	}
 	p {
-		line-height: 1em;
+		line-height: 1.3em;
 	    margin-top: 0;
 	    margin-bottom: 1.2em;
 	}
@@ -111,5 +165,15 @@ body {
 	}
 	.hide {
 		display: none;
+	}
+	%font-aws {
+		font-family: "Font Awesome 5 Free";
+	    -moz-osx-font-smoothing: grayscale;
+	    -webkit-font-smoothing: antialiased;
+	    display: inline-block;
+	    font-style: normal;
+	    font-variant: normal;
+	    text-rendering: auto;
+	    line-height: 1;
 	}
 }

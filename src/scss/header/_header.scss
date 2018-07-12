@@ -1,0 +1,65 @@
+header {
+	.top-bar {
+		background-color: $gray-bg;
+		font-size: 0.9em;
+		padding: 10px 0;
+	}
+	.ofertas {
+		text-aligh: left;
+	}
+	.links {
+		text-align: right;
+	}
+	.main-bar {
+		padding: 20px 0;
+		.wd-search {
+			button {
+			    position: absolute;
+			    right: 4px;
+			    top: 0;
+			    width: auto;
+			}
+		}
+		.dropdown-account {
+			position: relative;
+			line-height: 42px;
+			&:hover {
+				.wd-profile-welcome-shopper {
+					display: block;
+				}
+			}
+			.header-title {
+				color: $font-dark;
+				cursor: pointer;
+				span, i {
+					color: $base-color;
+				}
+			}
+			.wd-profile-welcome-shopper {
+				display: none;
+			    position: absolute;
+			    left: -20px;
+			    top: 30px;
+			    height: 100px;
+			    width: 150px;
+			    padding: 15px;
+			    box-sizing: border-box;
+			    border: 1px solid #ccc;
+			    background: #fff;
+			    overflow: visible;
+			    .title {
+			    	display: none;
+			    }
+			    .login-wrapper, .new-account {
+			    	display: block;
+			    	text-align: center;
+			    }
+			}
+		}
+
+		.main-wishlist {
+			font-size: 30px;
+			text-align: center
+		}
+	}
+}

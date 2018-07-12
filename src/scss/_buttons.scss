@@ -1,6 +1,6 @@
-.btn {
+.btn, button {
 	outline: none;
-    background-color: $base-color;
+    background: $base-color;
     color: $font-light;
     border: none;
     border-radius: 2px;
@@ -16,11 +16,11 @@
     -moz-transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
     transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
     border-bottom: none;
-    border-bottom-color: $lighten-color;
+    border-bottom-color: tint($base-color, 15%);
     &:hover, &.btn-hover {
     	text-decoration: none;
 	    color: $font-light;
-	    background-color: $lighten-color;
+	    background-color: tint($base-color, 15%);
 	    border-bottom-color: $base-color;
     }
     &.btn-small {
@@ -28,6 +28,9 @@
     	font-size: 0.75rem;
     }
 	&.btn-outline {
+		background: $font-light;
+		border: 1px solid $base-color;
+		color: $base-color;
 		&:active {
 			background: tint($font-dark, 60%);
     		color: $base-color;
@@ -49,9 +52,10 @@
 	    text-align: center;
 	}
 	&[disabled] {
-		background-color: $font-dark;
+		background-color: tint($font-dark, 70%);
 	    font-weight: 500;
 	    color: tint($font-dark, 40%);
 	    border-bottom-color: tint($font-dark, 10%);
+	    cursor: wait;
 	}
 }
