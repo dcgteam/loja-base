@@ -41,7 +41,7 @@
 			transition-delay: 100ms;
 			.wd-category-menu {
     			ul.level-1 {
-				    border: 1px solid #ccc;
+				    border: 1px solid ;
 				    border-top: 0;
 				    padding: 0 20px;
 				    overflow: hidden;
@@ -55,7 +55,7 @@
 				    		font-size: $font-size;
 				    	}
 				    	h3 {
-				    		border-bottom: 1px solid #ccc;
+				    		border-bottom: 1px solid $gray-medium;
 				    		padding-bottom: 10px;
 	    					a {
 	    						font-weight: bold;
@@ -125,11 +125,13 @@
 					.sub-section {
 						display: block;
 						position: absolute;
-						border: 1px solid #ccc;
+						border: 1px solid $gray-medium;
+						border-top: 0;
 						background-color:$font-light;
 						z-index: 55;
 						padding: 20px 30px;
 						min-width: 100px;
+     					transition-delay: 100ms;
 						li {
 							&:first-child {
 								margin-top: 0;
@@ -155,12 +157,12 @@
 		}
 	}
 	.day-offer {
-	    background-color: #4aa2e3;
+	    background-color: $orange;
 	    height: 55px;
 	    float: right;
 	    text-align: center;
 	    text-transform: uppercase;
-	    color: #fff;
+	    color: $font-light;
 	    font-weight: bold;
 	    line-height: 55px;
 	    cursor: pointer;

@@ -4,8 +4,11 @@ $darken-color: darken( $base-color, 10% );
 $lighten-color: lighten($base-color, 10%);
 $font-dark: #444444;
 $font-light: #fff;
-$gray-bg: #eee;
-
+$gray-dark: #777;
+$gray-medium: #ccc;
+$gray-light: #eee;
+$orange: #ffa128;
+$btn-buy:#00ad6c;
 // alerts
 $success: #dff0d8;
 $info: #d9edf7;

@@ -33,7 +33,7 @@ body {
 	    color: $font-dark;
 	    background-color: #fff;
 	    background-image: none;
-	    border: 1px solid #ccc;
+	    border: 1px solid $gray-medium;
 	    border-radius: 4px;
 	    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -135,7 +135,7 @@ body {
 		thead th,
 		tbody td,
 		tfoot td {
-			border-bottom: 1px solid #EEE;
+			border-bottom: 1px solid $gray-light;
 			padding: 0.5em 0!important;
 		}
 		thead {
@@ -177,5 +177,13 @@ body {
 	    font-variant: normal;
 	    text-rendering: auto;
 	    line-height: 1;
+	}
+	#logo a {
+	    background-image: url(/custom/content/themes/temaBase/Imagens/logo.png);
+	    background-repeat: no-repeat;
+	    display: block;
+	    width: 170px;
+	    height: 40px;
+	    font-size: 0;
 	}
 }

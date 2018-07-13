@@ -1,0 +1,26 @@
+.wd-checkout-basket-summaryheader {
+	> a {
+		b {
+			font-size: 0;
+			&:before {
+				@extend %font-aws;
+				content: '\f07a';
+				font-size: 30px;
+			}
+		}
+		.basket-size-wrapper {
+			background-color: $orange;
+			color: $font-light;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+		    left: 20px;
+		    bottom: -7px;
+		    text-align: center;
+		    line-height: 20px;
+		    border: 2px solid #fff;
+		    font-weight: bold;
+			@include round(100%);	
+		}
+	}
+}

@@ -3,7 +3,7 @@
     background: $base-color;
     color: $font-light;
     border: none;
-    border-radius: 2px;
+    @include round(2px);
     position: relative;
     padding: 1em 2em;
     line-height: 1em;
