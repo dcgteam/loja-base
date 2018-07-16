@@ -1,0 +1,93 @@
+.wd-product-line {    
+	padding: 25px;
+	.item-description {
+		.name {
+			font-size: 1.2em;
+			font-weight: bold;
+			margin-bottom: 5px;
+			a {
+				color: $font-dark;
+			}
+		}
+		> .wd-product-rating {
+			padding-bottom: 5px;
+		}
+		.name-brand {
+			padding-bottom: 5px;
+		}
+		.description {
+			a {
+				display: block;
+				color: $font-dark;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	.wd-product-price-description {
+		.list-price {
+			color: $gray-dark;
+			font-size: 0.9em;
+			.prefix {
+
+			}
+			span {
+
+			}
+			&.variations {
+				color: $font-dark;
+				font-weight: bold;
+				span {
+					font-size: 1.6em;
+					color: $base-color;
+				}
+			}
+		}
+		.sale-price {
+			font-weight: bold;
+			.prefix {
+				font-size: 1em;
+			}
+			span {
+				font-size: 1.6em;
+				color: $base-color;
+			}
+		}
+		.condition {
+			font-size: 1em;
+			line-height: 1.3em;
+			.label {
+
+			}
+			.parcels, .parcel-value {
+				font-weight: bold;
+			}
+		}
+	}
+	.wd-buy-button {
+		width: 100%;
+		padding: 10px 0;
+		form {
+			display: block;
+			.btn-buy {
+				@extend .btn-wide;
+				&:before {
+					@extend %font-aws;
+					content: '\f07a';
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+	.more {
+		font-size: 0.9em;
+		li {
+			margin: 5px 0;
+			a {
+				&:before {
+					content: '+ ';
+				}
+			}
+		}
+	}
+	
+}
