@@ -23,4 +23,43 @@
 			@include round(100%);	
 		}
 	}
+	.wd-widget {
+		background-color: #fff;
+		border: 1px solid $gray-light;
+		padding: 15px;
+		.wd-header {
+			font-size: 18px;
+			text-align: left;
+			padding: 0;
+		}
+		.wd-content {
+			padding: 0;
+			padding-bottom: 15px;
+			margin: 0;
+			ul {
+				li {
+					.price {
+						font-weight: bold;
+						font-size: 1.2em;
+					}		
+				}
+			}
+			
+			.subtotal {
+				padding: 0;
+				height: auto;
+				li {
+					margin: 0;
+				}
+				.value {
+					position: initial;
+					float: right;
+				}
+			}
+		}
+		.wd-footer {
+			padding: 15px 0 0 0;
+			border-top: 1px solid $gray-light;
+		}
+	}
 }
