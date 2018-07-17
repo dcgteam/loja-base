@@ -25,3 +25,8 @@
   width: $width;
   max-width: $width;
 }
+
+@mixin calculate($fullWidth, $quantity) {
+  $width : $fullWidth / $quantity;
+  width: $width;
+}
