@@ -26,12 +26,16 @@
     		.input-email-marketing-newsletter {
 				width: 75%;
 				float: left;
+                input {
+                    @include round-right(0);
+                }
 			}
 			.input-button-marketing-newsletter {
 				float: left;
 				width: 25%;
 				button {
-					width: 100%;
+                    @extend .btn-wide;
+                    @include round-left(0);
 				}
 			}
     	}

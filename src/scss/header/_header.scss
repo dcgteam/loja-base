@@ -18,11 +18,15 @@ header {
 	.main-bar {
 		padding: 20px 0;
 		.wd-search {
+			input {
+				@include round-right(0);
+			}
 			button {
 			    position: absolute;
 			    right: 4px;
 			    top: 0;
 			    width: auto;
+			    @include round-left(0);
 			}
 		}
 		.dropdown-account {
@@ -64,7 +68,10 @@ header {
 
 		.main-wishlist {
 			font-size: 30px;
-			text-align: center
+			text-align: center;
+			a {
+				color: $base-color-2;
+			}
 		}
 	}
 }

@@ -1,19 +1,29 @@
 .wd-widget {
+	overflow: hidden;
 	.wd-header {
-		padding: 15px;
-		margin-bottom: 10px; 
-		font-size: 1.6em;
-	    text-transform: uppercase;
-	    font-weight: bold;
-	    position: relative;
-	    span.wd-icon:before {
-		    content: '';
-		    display: block;
-		    width: 150px;
-		    height: 5px;
-		    background-color: $base-color;
-		    position: absolute;
-		    bottom: 0;
+	    span.wd-icon {
+	    	display: inline-block;
+		}
+		.wd-title {
+			display: inline-block;
+		}
+	}
+	&.wd-browsing-product-carousel, &.wd-product-list {
+		.wd-header {
+			padding: 15px;
+			margin-bottom: 10px; 
+			font-size: 2em;
+		    position: relative;
+			.wd-icon {
+				&:before {
+					content: "\f054";
+				    font: normal normal normal 14px/1 FontAwesome;
+				    font-size: 0.8em;
+				    font-weight: normal;
+				    color: $base-color;
+		    		display: block;
+				}
+			}
 		}
 	}
 }

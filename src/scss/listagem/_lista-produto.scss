@@ -4,7 +4,7 @@
 		.wd-product-list {
 			height: auto;
 			li {
-				@include calculate($wrapper, 4);
+				@include calculate($wrapper,$qtd-products);
 			}
 		}
 	}

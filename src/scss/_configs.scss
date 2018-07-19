@@ -1,5 +1,6 @@
 // colors
-$base-color: #0A7ACA;
+$base-color: #06799F;
+$base-color-2: #FF8973;
 $darken-color: darken( $base-color, 10% );
 $lighten-color: lighten($base-color, 10%);
 $font-dark: #444444;
@@ -7,15 +8,18 @@ $font-light: #fff;
 $gray-dark: #777;
 $gray-medium: #ccc;
 $gray-light: #eee;
-$orange: #ffa128;
-$btn-buy:#00ad6c;
+$btn-buy:#22884F;
+
 // alerts
 $success: #dff0d8;
 $info: #d9edf7;
 $warning:#fcf8e3;
 $danger:#f2dede;
 
-// fonts 
+//flags
+$flag: #22884F;
+
+// fonts settings
 $font-family: Arial, Helvetica, Sans-serif;
 $font-size: 14px;
 

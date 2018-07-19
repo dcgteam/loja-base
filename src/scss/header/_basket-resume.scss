@@ -3,13 +3,12 @@
 		b {
 			font-size: 0;
 			&:before {
-				@extend %font-aws;
-				content: '\f07a';
+				@include aws-icon("\f07a");
 				font-size: 30px;
 			}
 		}
 		.basket-size-wrapper {
-			background-color: $orange;
+			background-color: $base-color-2;
 			color: $font-light;
 			width: 20px;
 			height: 20px;

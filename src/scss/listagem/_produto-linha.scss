@@ -69,10 +69,8 @@
 		form {
 			display: block;
 			.btn-buy {
-				@extend .btn-wide;
 				&:before {
-					@extend %font-aws;
-					content: '\f07a';
+					@include aws-icon("\f07a", 300);
 					padding-right: 5px;
 				}
 			}

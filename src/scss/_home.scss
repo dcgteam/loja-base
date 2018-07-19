@@ -1,0 +1,62 @@
+.banner-news-middle {
+	overflow: hidden;
+	margin: 50px 0;
+	> div {
+		float:left;
+		width: 49%;
+		&:last-child {
+			float:right;
+		}
+		.wd-marketing-newsletter {
+			.wd-header {
+				width: 45%;
+				.wd-icon {
+					&:before {
+						@include aws-icon("\f0e0");
+						font-size: 3em;
+						margin-right: 10px;
+					}
+				}
+				.wd-title {
+					font-size: 1.4em;
+					small {
+						display: block;
+						font-size: 0.66em;
+						font-weight: normal;
+					}
+				}				
+			}
+			.wd-header, .wd-content {
+				float: left;
+				padding: 12px 0;
+			}
+			.wd-content {
+				width: 55%;
+				form {
+					margin: 0;
+				}
+				.input-name-marketing-newsletter, label, .form-wrapper > p {
+					display: none;
+				}
+				.input-email-marketing-newsletter {
+					width: 65%;
+					input {
+						@include round-right(0);
+					}
+				}
+				.input-button-marketing-newsletter {
+					width: 35%;
+					button {
+						@extend .btn-wide;
+						@include round-left(0);
+					}
+				}
+				.input-email-marketing-newsletter,
+				.input-button-marketing-newsletter {
+					float: left;
+				}
+			}
+		}
+		
+	}
+}

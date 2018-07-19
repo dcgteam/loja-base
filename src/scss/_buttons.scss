@@ -58,4 +58,7 @@
 	    border-bottom-color: tint($font-dark, 10%);
 	    cursor: wait;
 	}
+	&.btn-buy {
+		background-color: $btn-buy;
+	}
 }

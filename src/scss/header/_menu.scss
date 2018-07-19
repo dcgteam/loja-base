@@ -1,15 +1,15 @@
 .category-bar {
 	background-color: $base-color;
-	height: 55px;
+	min-height: 46px;
 	.all-category {
 		.button-extend {
 			position: relative;
 			background-color: $darken-color;
-			height: 55px;
+			height: 100%;
 			font-weight: bold;
 			text-align: center;
 			color: $font-light;
-     		padding: 1em 1.5em;
+     		padding: 0.66em 1.5em;
      		width: 100%;
      		box-sizing: border-box;
     		line-height: 2em;
@@ -21,7 +21,7 @@
 			    border-right: 7px solid transparent;
 			    border-bottom: 7px solid #FFFFFF;
 			    position: absolute;
-			    top: 48px;
+			    top: 39px;
 			    left: 50%;
 			    margin-left: -7px;
 			    opacity: 0;
@@ -103,7 +103,7 @@
 					margin: 0;
 					a {
 						color: $font-light;
-						padding: 1.4em;
+						padding: 1.06em 1.4em;
 						display: block;
 						text-decoration: none;
 					}
@@ -157,14 +157,14 @@
 		}
 	}
 	.day-offer {
-	    background-color: $orange;
-	    height: 55px;
+	    background-color: $base-color-2;
+	    height: 46px;
 	    float: right;
 	    text-align: center;
 	    text-transform: uppercase;
 	    color: $font-light;
 	    font-weight: bold;
-	    line-height: 55px;
+	    line-height: 46px;
 	    cursor: pointer;
 	}
 }
