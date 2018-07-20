@@ -12,10 +12,14 @@
 		> .wd-product-rating {
 			padding-bottom: 5px;
 		}
-		.name-brand {
+		.brand-ref {
 			padding-bottom: 5px;
+			a {
+				display: inline-block;
+			}
 		}
 		.description {
+			padding-bottom: 5px;
 			a {
 				display: block;
 				color: $font-dark;
@@ -24,6 +28,7 @@
 		}
 	}
 	.wd-product-price-description {
+		margin: 10px 0;
 		.list-price {
 			color: $gray-dark;
 			font-size: 0.9em;
@@ -70,8 +75,9 @@
 			display: block;
 			.btn-buy {
 				&:before {
-					@include aws-icon("\f07a", 300);
+					@include aws-icon("\f07a");
 					padding-right: 5px;
+					font-size: 0.9em;
 				}
 			}
 		}

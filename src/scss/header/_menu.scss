@@ -41,7 +41,7 @@
 			transition-delay: 100ms;
 			.wd-category-menu {
     			ul.level-1 {
-				    border: 1px solid $gray-medium;
+				    border: 1px solid $gray-light;
 				    border-top: 0;
 				    padding: 0 20px;
 				    overflow: hidden;
@@ -125,7 +125,7 @@
 					.sub-section {
 						display: block;
 						position: absolute;
-						border: 1px solid $gray-medium;
+						border: 1px solid $gray-light;
 						border-top: 0;
 						background-color:$font-light;
 						z-index: 55;

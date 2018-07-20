@@ -1,0 +1,30 @@
+#left {
+	padding: 0;
+	.wd-facet-group {
+		.facets, .facet-type-range .range-wrapper {
+			background: #fff;
+			border: 0;
+			* {
+				box-shadow: none;
+				color: $font-dark;
+			}
+			.handler {
+				.icon {
+					@include round(100%);
+					background-color: $font-light;
+					width: 12px;
+					height: 12px;
+					border: 1px solid $gray-medium;
+				}
+			}
+			.defined-range {
+				background: $lighten-color;
+			}
+			.submit {
+				@extend .btn;
+				@extend .btn-wide;
+				margin-top: 35px;
+			}
+		}
+	}	
+}
