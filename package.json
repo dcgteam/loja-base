@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "bourbon-neat": "^3.0.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "node-sass": "^4.9.2"
   }
 }

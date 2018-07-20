@@ -25,8 +25,10 @@ $font-size: 14px;
 
 // structure
 $wrapper: 1180px;
-// quantidade de produtos por linha em listagens -- geral
-$qtd-products: 4;
-// quantidade de produtos por linha na vitrine especial -- nome e preco ao lado 
-$special-qtd-products: 2;
+// quantidade de produtos por linha em listagens
+$qtd-products-vitrine: 4;
+$qtd-products-listagem: 3;
+// quantidade de produtos por linha na vitrine nome e preco ao lado 
+$qtd-products-vitrine-horizontal: 2;
+
 
