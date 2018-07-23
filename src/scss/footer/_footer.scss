@@ -114,13 +114,15 @@
     	}
     }
     .footer-social {
+        * {
+            text-align: center;
+        }
     	.box {
     		width: 450px;
     		margin: 0 auto;
     		overflow: hidden;
     	}
     	.icons {
-    		text-align: center;
     		a {
     			padding: 1.3em 0.8em;
     			display: inline-block;

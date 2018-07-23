@@ -9,7 +9,11 @@ header {
 	}
 	.links {
 		text-align: right;
+		@include grid-media($grid-pp){
+			display: none;
+		}
 	}
+
 	.ofertas, .links {
 		i {
 			margin-right: 5px;
@@ -17,6 +21,63 @@ header {
 	}
 	.main-bar {
 		padding: 20px 0;
+		.hamburguer {
+			display: none;
+			text-align: center;
+			> i {
+				color: $base-color;
+				font-size: 2em;
+			}
+			@include grid-media($grid-p){
+				display: block;
+			}
+			@include grid-media($grid-pp){
+				display: block;
+			}
+			.dropdown-menu {
+				display: none;
+				background-color: $gray-light;
+			    padding: 10px 15px;
+			    position: absolute;
+			    width: 100%;
+			    left: 15px;
+			    top: 0;
+			    z-index: 2;
+				.account * {
+					color: $font-dark;
+				}
+				.category-menu-small {
+					.wd-category-menu {
+						.level-1 {
+							>li {
+								margin: 0;
+								&.has-children {
+									.icon {
+										@include aws-icon("\f107");
+										display: block;
+										font-size: 1em;
+										float: left;
+									}
+								}
+								h3, h4 {
+									font-size: 1.1em;
+									font-weight: normal;
+									margin: 0;
+									padding: 1.1em 0;
+									border-bottom: 1px solid $gray-medium;
+								}
+								a {
+									color: $font-dark;
+								}
+								.level-2 {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		.wd-search {
 			input {
 				@include round-right(0);
@@ -82,5 +143,11 @@ header {
 				color: $base-color-2;
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.icons-resume {
+		order: 13;
 	}
 }

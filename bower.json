@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "bourbon": "~4.2.5",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~4.0.0"
   }
 }

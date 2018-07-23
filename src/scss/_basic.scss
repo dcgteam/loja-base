@@ -4,6 +4,9 @@ body {
 	color: $font-dark;
 	margin: 0;
     padding: 0;
+    #footer, #header, #middle {
+    min-width: auto;
+	}
 	a {
 		text-decoration: none;
 		color: $base-color;
@@ -167,17 +170,6 @@ body {
 	}
 	.hide {
 		display: none;
-	}
-	%font-aws {
-		font-family: "Font Awesome 5 Free";
-	    -moz-osx-font-smoothing: grayscale;
-	    -webkit-font-smoothing: antialiased;
-	    display: inline-block;
-	    font-style: normal;
-	    font-variant: normal;
-	    text-rendering: auto;
-	    line-height: 1;
-	    font-weight: 900;
 	}
 	#logo a {
 	    background-image: url(/custom/content/themes/temaBase/Imagens/logo.png);

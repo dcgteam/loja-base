@@ -32,3 +32,28 @@ $qtd-products-listagem: 3;
 $qtd-products-vitrine-horizontal: 2;
 
 
+$grid-pp: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (max-width: 575px)"
+);
+$grid-p: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (min-width: 575px) and (max-width:767px)"
+);
+$grid-m: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (min-width: 768px) and (max-width:991px)"
+);
+$grid-g: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (min-width: 992px) and (max-width:1179px)"
+);
+$grid-gg: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (min-width: 1180px)"
+);

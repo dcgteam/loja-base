@@ -3,7 +3,9 @@
 	margin: 50px 0;
 	> div {
 		float:left;
-		@extend .col.col-6;
+		&:first-child {
+			padding:0;
+		}
 		&:last-child {
 			float:right;
 		}
