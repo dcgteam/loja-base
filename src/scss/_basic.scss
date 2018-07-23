@@ -180,3 +180,22 @@ body {
 	    font-size: 0;
 	}
 }
+.wrapper, .grid-products #middle {
+	@include grid-container;
+	position: relative;
+	margin: 0 auto;
+	.row {
+		width: 100%;
+		float: none;
+	}
+}	
+@media screen and (min-width: $wrapper) {
+	.wrapper, .grid-products #middle {
+		@include wrapper-width();
+	}
+}
+@media screen and (max-width: ($wrapper - 1px)) {
+	.wrapper, .grid-products #middle {
+		@include wrapper-width(100%);
+	}	
+}
