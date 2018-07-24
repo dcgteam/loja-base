@@ -27,59 +27,11 @@
 			}
 		}
 	}
-	.wd-product-price-description {
-		margin: 10px 0;
-		.list-price {
-			color: $gray-dark;
-			font-size: 0.9em;
-			.prefix {
-
-			}
-			span {
-
-			}
-			&.variations {
-				color: $font-dark;
-				font-weight: bold;
-				span {
-					font-size: 1.6em;
-					color: $base-color;
-				}
-			}
-		}
-		.sale-price {
-			font-weight: bold;
-			.prefix {
-				font-size: 1em;
-			}
-			span {
-				font-size: 1.6em;
-				color: $base-color;
-			}
-		}
-		.condition {
-			font-size: 1em;
-			line-height: 1.3em;
-			.label {
-
-			}
-			.parcels, .parcel-value {
-				font-weight: bold;
-			}
-		}
-	}
 	.wd-buy-button {
 		width: 100%;
 		padding: 10px 0;
 		form {
 			display: block;
-			.btn-buy {
-				&:before {
-					@include aws-icon("\f07a");
-					padding-right: 5px;
-					font-size: 0.9em;
-				}
-			}
 		}
 	}
 	.more {

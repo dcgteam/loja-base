@@ -60,5 +60,29 @@
 	}
 	&.btn-buy {
 		background-color: $btn-buy;
+    	&:before {
+    		@include aws-icon("\f07a");
+    		font-size:0.8em;
+    		padding-right: 5px;
+    	}
+    	&:active {
+			background: tint($btn-buy, 20%);
+		}
+		&:hover {
+		    background: tint($btn-buy, 10%);
+		}
+	}
+	&.bt-notifyme {		
+		margin: 15px 0;		    		
+		@extend .btn-wide;
+		background: $gray-dark;
+		padding: 15px;
+		font-family: $font-family;
+		&:active {
+			background: tint($gray-dark, 20%);
+		}
+		&:hover {
+		    background: tint($gray-dark, 20%);
+		}
 	}
 }

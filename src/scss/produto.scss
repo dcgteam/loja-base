@@ -5,6 +5,5 @@
 @import 'mixins';
 @import 'botoes';
 @import 'basico';
-@import 'listagem/_produto-linha';
-@import 'listagem/_facetas';
-@import 'listagem/_lista-produto';
+@import 'produto/_produto-detalhe';
+@import 'produto/associacoes';

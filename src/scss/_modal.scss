@@ -1,0 +1,17 @@
+.the-modal {
+	.the-modal-container {
+		background: $font-light;
+	    height: 100%;
+	    padding: 35px;
+	    .wd-header {
+	    	margin-bottom: 20px;
+	    	.wd-title {
+	    		font-size: 2em;
+	    	}
+	    }
+	    .wd-subtitle {
+	    	font-size: 1.3em;
+	    	padding: 15px 0;
+	    }
+	}
+}

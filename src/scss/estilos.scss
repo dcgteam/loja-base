@@ -4,14 +4,17 @@
 
 @import 'configs';
 @import 'mixins';
-@import 'fonts';
-@import 'basic';
-@import 'buttons';
+@import 'fontes';
+@import 'basico';
+@import 'botoes';
 @import 'modal';
-@import 'alerts';
-//@import 'listagem';
+@import 'alertas';
+@import 'listagem';
 @import 'flags';
 @import 'home';
-//@import 'footer';
-//@import 'header';
+@import 'footer';
+@import 'header';
+@import 'preco';
+@import 'produto';
+@import 'modal';
 @import 'widgets/general-widgets';

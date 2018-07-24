@@ -1,0 +1,45 @@
+.wd-product-associations {
+	&:not(.cross-sell) {
+		.wd-header {
+	    	padding: 20px;
+	    	.wd-title {
+	    		font-size: 1.8em;
+	    	}
+	    }
+	}
+	&.cross-sell{
+		.wd-content {
+			form  {
+				ul {
+					@include grid-column(8);
+					li {
+						@include grid-column(6);
+					}
+				}
+				.cross-sell-footer {
+					@include grid-column(4);
+					background-color: #fff;
+				}
+			}			
+		}
+	}	
+}
+.wd-product-reviews.wd-widget, .wd-product-associations.wd-widget.cross-sell {
+	border: 1px solid $gray-medium;
+    .wd-header {
+    	background-color: $gray-light;
+    	padding: 20px;
+    	.wd-title {
+    		font-size: 1.8em;
+    	}
+    }
+}
+
+.wd-product-reviews {
+	width: 100%;
+	.review-create {
+		@extend .btn ;
+		@extend .btn-small;
+		margin-left: 20px;
+	}
+}
