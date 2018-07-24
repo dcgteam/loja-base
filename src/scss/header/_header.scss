@@ -54,7 +54,7 @@ header {
 			.wd-profile-welcome-shopper {
 				display: none;
 			    position: absolute;
-			    left: -20px;
+			    left: 0px;
 			    top: 30px;
 			    height: 100px;
 			    width: 150px;
@@ -87,6 +87,9 @@ header {
 			text-align: center;
 			a {
 				color: $base-color-2;
+				&:hover {
+					color: darken( $base-color-2, 10% );
+				}
 			}
 		}
 	}

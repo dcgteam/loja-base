@@ -15,8 +15,9 @@
 			position: absolute;
 		    left: 20px;
 		    bottom: -7px;
+		    font-size: 0.8em;
 		    text-align: center;
-		    line-height: 20px;
+		    line-height: 16px;
 		    border: 2px solid #fff;
 		    font-weight: bold;
 			@include round(100%);	
@@ -26,6 +27,7 @@
 		background-color: #fff;
 		border: 1px solid $gray-light;
 		padding: 15px;
+		top: 35px;
 		.wd-header {
 			font-size: 18px;
 			text-align: left;
@@ -36,6 +38,7 @@
 			padding-bottom: 15px;
 			margin: 0;
 			ul {
+				padding: 0;
 				li {
 					.price {
 						font-weight: bold;
@@ -61,6 +64,9 @@
 			border-top: 1px solid $gray-light;
 			.go-to-basket {
 				background-color: $btn-buy;
+			}
+			.go-to-checkout {
+				display: none;
 			}
 		}
 	}

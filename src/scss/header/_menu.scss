@@ -170,9 +170,6 @@
 						text-decoration: none;
 					}
 				}
-				&.has-children {
-
-				}
 				&:not(:first-child) {
 					&:before {
 					content: '';
@@ -228,6 +225,11 @@
 	    font-weight: bold;
 	    line-height: 46px;
 	    cursor: pointer;
+	    flex: auto;
+	    &:hover {
+	    	background-color: darken( $base-color-2, 10% );
+
+	    }
 	}
 }
 @media screen and (max-width: 1078px) {
