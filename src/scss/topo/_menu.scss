@@ -83,7 +83,7 @@
 			    border-right: 7px solid transparent;
 			    border-bottom: 7px solid #FFFFFF;
 			    position: absolute;
-			    top: 39px;
+			    top: 40px;
 			    left: 50%;
 			    margin-left: -7px;
 			    opacity: 0;
@@ -228,7 +228,16 @@
 	    flex: auto;
 	    &:hover {
 	    	background-color: darken( $base-color-2, 10% );
-
+	    	.dropdown-oferta {
+	    		display: block;
+	    	}
+	    }
+	    .dropdown-oferta {
+	    	display: none;
+	    	position: absolute;
+	    	right: 0;
+	    	z-index: 2;
+	    	transition: all 0.3s cubic-bezier(0.4, 0.2, 0, 1) 0ms;
 	    }
 	}
 }

@@ -8,7 +8,7 @@
 			display: inline-block;
 		}
 	}
-	&.wd-browsing-product-carousel, &.wd-product-list {
+	&.wd-browsing-product-carousel, &.wd-product-list, &.wd-product-featured-list {
 		.wd-header {
 			padding: 15px;
 			margin-bottom: 10px; 
@@ -24,6 +24,25 @@
 		    		display: block;
 				}
 			}
+		}
+	}
+}
+.wd-browsing-breadcrumbs {
+	.location {
+		display: none;
+	}
+	li:not(.last){
+		&:after {
+			@include aws-icon("\f105");
+			color: $gray-dark;
+		}
+		a {
+			color: $gray-dark;
+		}
+	}
+	.last {
+		strong {
+			font-weight: bold;
 		}
 	}
 }

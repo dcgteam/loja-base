@@ -20,6 +20,7 @@
 			}
 		}
 		.information {
+			padding-left: 30px;
 			padding-right: 0;
 			.detalhes {
 				padding-left: 0;
@@ -68,20 +69,29 @@
 						}
 					}
 				}
+				.wd-product-join {
+					margin-bottom: 20px;
+					ul {
+						li {
+							width: 70px;
+							height: 70px;
+						}
+					}
+				}
 			}
 			.buy {
 				padding-right: 0;
 				margin-top: 30px;
 				.buy-box {
 					background-color: $gray-light;
-				    padding: 30px;
+				    padding: 20px;
 				    border-top: 1px solid $gray-medium;
 				    .wd-buy-button {
 				    	width: 100%;
-				    	margin-top: 15px;
+				    	margin: 15px 0;
 				    	.btn-buy {
 					    	@extend .btn-wide;
-					    	font-size: 1.6em;
+					    	font-size: 1.5em;
 					    }
 				    }
 				    .wd-product-oneclickbuy, .wd-product-oneclickbuy > div{
@@ -89,7 +99,7 @@
 				    	a:not(.url-read-more) {
 				    		@extend .btn;
 				    		@extend .btn-wide;
-				    		margin: 15px 0;
+				    		margin-bottom: 15px;
 				    	}
 				    	.text-account-text {
 				    		display: none;
@@ -103,8 +113,9 @@
 				    	.btn-product-wishlist-add {
 				    		@extend .btn-outline;
 				    		@extend .btn-wide;
-				    		padding: 15px 26px;
+				    		padding: 15px;
 				    		font-family: $font-family;
+				    		font-size: 0.9em;
 				    		&:before {
 				    			@include aws-icon('\f004');
 				    			padding-right: 5px;
