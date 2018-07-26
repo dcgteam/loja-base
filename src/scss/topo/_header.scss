@@ -6,6 +6,8 @@ header {
 	}
 	.ofertas {
 		text-align: left;
+		text-transform: uppercase;
+    	font-size: 0.9em;
 	}
 	.links {
 		text-align: right;
@@ -30,11 +32,11 @@ header {
 			    @include round-left(0);
 			}
 		}
-		.dropdown-account {
+		.wd-profile-welcome-shopper {
 			position: relative;
-			line-height: 42px;
+			line-height: 30px;
 			&:hover {
-				.wd-profile-welcome-shopper {
+				.widget-content {
 					display: block;
 				}
 			}
@@ -43,7 +45,7 @@ header {
     			padding-right: 5px;
     			color: $base-color;
 			}
-			.header-title {
+			.title {
 				color: $font-dark;
 				cursor: pointer;
 				display: inline-block;
@@ -51,12 +53,12 @@ header {
 					color: $base-color;
 				}
 			}
-			.wd-profile-welcome-shopper {
+			.widget-content {
 				display: none;
 			    position: absolute;
 			    left: 0px;
 			    top: 30px;
-			    height: 100px;
+			    min-height: 100px;
 			    width: 150px;
 			    padding: 15px;
 			    box-sizing: border-box;
@@ -64,9 +66,6 @@ header {
 			    background: #fff;
 			    overflow: visible;
 			    z-index: 2;
-			    .title {
-			    	display: none;
-			    }
 			    .login-wrapper, .new-account {
 			    	display: block;
 			    	text-align: center;
@@ -76,8 +75,24 @@ header {
 		    	}
 		    	.login-title {
 		    		background-color: $btn-buy;
+		    		color: $font-light;
 		    		margin-bottom: 10px;
 		    		@include round(2px);
+		    	}
+		    	.shopper-authenticated {
+		    		a {
+		    			line-height: auto;
+		    			display: block;
+		    			&.put-pipe {
+		    				padding: 0;
+		    				&:before {
+		    					display: none;
+		    				}
+		    				b {
+		    					font-weight: normal;
+		    				}
+		    			}
+		    		}
 		    	}
 			}
 		}

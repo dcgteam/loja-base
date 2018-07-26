@@ -22,24 +22,26 @@
 		.information {
 			padding-left: 30px;
 			padding-right: 0;
+			.product-information {
+				color: $gray-dark;
+				font-size: 0.9em;
+				margin-bottom: 20px;
+				padding: 0;
+				dd {
+					width: auto;
+					margin-right: 10px;
+				}
+				.short-description {
+					padding: 0;
+					border: 0;
+				}
+			}
 			.detalhes {
 				padding-left: 0;
-				>.col, .product-information {
+				>.col{
 					padding: 0;
 				}
-				.product-information {
-					color: $gray-dark;
-					font-size: 0.9em;
-					margin-bottom: 20px;
-					dd {
-						width: auto;
-						margin-right: 10px;
-					}
-					.short-description {
-						padding: 0;
-						border: 0;
-					}
-				}
+				
 				.wd-product-variations {
 					width: 100%;
 					margin-bottom: 20px;
@@ -57,15 +59,6 @@
 						.stockTip {
 							width: 40px;
 							margin: 0 auto
-						}
-					}
-				}
-				.wd-product-payment-options {
-					button {
-						@extend .btn-outline;
-						&:before {
-							@include aws-icon("\f09d");
-							padding-right: 5px;
 						}
 					}
 				}
@@ -137,6 +130,44 @@
 					}
 				}
 			}
+			.wd-product-payment-options {
+				button {
+					@extend .btn-outline;
+					&:before {
+						@include aws-icon("\f09d");
+						padding-right: 5px;
+					}
+				}
+			}
+			.wd-product-bundle {
+				.wd-title {
+					font-size: 1.3em;
+					font-weight: bold;
+				}
+				.buy {
+					margin-top: 10px;
+				}
+				.bundle-items-wrapper {
+					padding-left: 0;
+					border-bottom:0;
+				}
+				.bundle-itemtype-item {
+					padding: 20px 0;
+					background-color: #fff;
+					.title {
+						border: 0;
+						display: block;
+						padding: 0;
+						margin: 0;
+					}
+					.bundle-item-img {
+						img  {							
+							max-width: 80px;
+							height: auto;
+						}
+					}
+				}
+			}
 		}
 	}
 	.wd-descriptions {
@@ -155,7 +186,8 @@
 					border: 1px solid $gray-medium;
 					border-bottom: 0;
 					padding: 15px;
-					margin: 0;
+					margin-right: 5px;
+					height: 53px;
 					&.wd-selected {
 						background-color: $font-light;
 						z-index: 1;
@@ -179,6 +211,28 @@
 		margin: 30px 0;
 		.wd-content {
 			padding: 25px;
+			.wd-review-title {
+				font-size: 1.1em;
+			}
+			.date {
+				font-size: 0.9em;
+			}
+			cite {
+				display: inline-block;
+				margin: 0;
+				font-style: normal;
+			}
+			.wd-review-text {
+				padding: 10px 0;
+				font-size: 1.1em;
+			}
+			.wd-review-paginate {
+				text-align: center;
+				ul {
+					display: inline-block;
+					padding-left: 0;
+				}
+			}
 		}
 		.wd-footer {
 			.review-create {

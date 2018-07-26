@@ -9,21 +9,21 @@
 		span {
 
 		}
-		&.variations {
+		&.variation {
 			color: $font-dark;
-			font-weight: bold;
 			span {
+				font-weight: bold;
 				font-size: 1.6em;
 				color: $base-color;
 			}
 		}
 	}
 	.sale-price {
-		font-weight: bold;
 		.prefix {
 			font-size: 1em;
 		}
 		span {
+			font-weight: bold;
 			font-size: 1.6em;
 			color: $base-color;
 		}
@@ -36,6 +36,13 @@
 		}
 		.parcels, .parcel-value {
 			font-weight: bold;
+		}
+	}
+	.savings {
+		font-size: 1em;
+		.discount {
+			font-weight: bold;
+			color: $price-off;
 		}
 	}
 }
