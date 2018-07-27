@@ -16,12 +16,9 @@
 		    position: relative;
 			.wd-icon {
 				&:before {
-					content: "\f054";
-				    font: normal normal normal 14px/1 FontAwesome;
+					@include aws-icon("\f054");
 				    font-size: 0.8em;
-				    font-weight: normal;
 				    color: $base-color;
-		    		display: block;
 				}
 			}
 		}

@@ -23,6 +23,25 @@
 			@include round(100%);	
 		}
 	}
+	&.empty {
+		.wd-widget {
+			padding: 40px 15px;
+			> div {
+				display: none;
+			}
+			&:before {
+				@include aws-icon("\f07a");
+				font-size: 35px;
+				padding-right: 10px;
+			}
+			&:after {
+				content:'Seu carrinho está vazio';
+				font-size: 1.5em;
+				font-weight: bold;
+				line-height: 35px;
+			}
+		}
+	}
 	.wd-widget {
 		background-color: #fff;
 		border: 1px solid $gray-light;

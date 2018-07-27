@@ -45,12 +45,15 @@ header {
     			padding-right: 5px;
     			color: $base-color;
 			}
-			.title {
-				color: $font-dark;
-				cursor: pointer;
-				display: inline-block;
-				span, i {
-					color: $base-color;
+			.widget-title {
+			line-height: 45px;				
+				.title {
+					color: $font-dark;
+					cursor: pointer;
+					display: inline-block;
+					span, i {
+						color: $base-color;
+					}
 				}
 			}
 			.widget-content {

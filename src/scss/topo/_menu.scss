@@ -68,7 +68,6 @@
 		.button-extend {
 			position: relative;
 			height: 100%;
-			font-weight: bold;
 			text-align: center;
 			color: $font-light;
      		padding: 0.66em 1.5em;
@@ -159,7 +158,8 @@
 				margin: 0;
 				padding: 0;
 				h3 {
-					font-size: $font-size;					
+					font-size: $font-size;
+					font-weight: normal;					
 					display: inline-block;
 					padding: 0;
 					margin: 0;
@@ -217,12 +217,11 @@
 	}
 	.day-offer {
 	    background-color: $base-color-2;
-	    height: 46px;
+	    height: 46.66px;
 	    float: right;
 	    text-align: center;
 	    text-transform: uppercase;
 	    color: $font-light;
-	    font-weight: bold;
 	    line-height: 46px;
 	    cursor: pointer;
 	    flex: auto;
