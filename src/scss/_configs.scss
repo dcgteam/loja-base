@@ -4,12 +4,15 @@ $base-color-2: #FF8973;
 $darken-color: darken( $base-color, 10% );
 $lighten-color: lighten($base-color, 10%);
 $font-dark: #444444;
+
 $font-light: #fff;
 $gray-dark: #777;
 $gray-medium: #ccc;
+$gray-semilight: #ddd;
 $gray-light: #eee;
-$btn-buy:#22884F;
+$gray-extralight: #f1f1f1;
 
+$btn-buy:#22884F;
 $price-off: #A1000C;
 
 // alerts

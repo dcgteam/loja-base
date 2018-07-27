@@ -1,0 +1,118 @@
+.wd-checkout-basket {
+	.botoes-rodape {
+		.bt-keep-buying {
+			margin-top: 0;
+			margin-bottom: 34px;
+		}
+	}
+	.wd-checkout-basket-buttons {
+		margin-bottom: 40px;
+		.bt-keep-buying {
+			float: left;
+			margin-top: 34px;
+		}
+		.bt-clear-basket, .wd-checkout-basket-oneclickbuy, .bt-checkout {
+			float: right;
+			margin-right: 0;
+		}
+		.wd-checkout-basket-oneclickbuy {
+			width: auto;
+			margin-top: 15px;
+			.btn-basket-oneclickbuy {
+				@extend .btn-big;
+				background-image: none;
+				background-color: $base-color;
+				text-indent: initial;
+				padding: 1em 2em !important;
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+	.wd-checkout-basket-grid {
+		.grid {
+			border: 1px solid $gray-semilight;
+
+			.grid-title {
+				background-color: #f1f1f1;
+				li {
+					font-weight: bold;
+					padding: 5px 20px;
+					text-align: center;
+					&.product {
+						text-align: left;
+					}
+					&.subtotal {
+						text-align: right;
+					}
+				}
+			}
+			.grid-informations {
+				.item {
+					border-bottom: 1px solid $gray-semilight;
+					.data {
+						display: inline-block;
+						a {
+							display: block;
+							padding-bottom: 10px;
+						}
+						.warning {
+							@extend .alert;
+							@extend .alert-warning;
+							@extend .small;
+						}
+					}
+					.price {
+						text-align: center;
+					}
+					.quantity {
+						text-align: center;
+						.change {
+							button {
+								background: $gray-extralight;
+							    color: $base-color;
+							    font-weight: normal;
+							    padding: 0.71em 0.9em;
+							    width: 34px;
+							    float: left;
+							    border: 1px solid $gray-semilight;						    
+								@include round(0);
+							}
+							input {
+								float: left;
+								width: 50px;
+								height: 36px;
+								@include round(0);
+							    border: 1px solid $gray-semilight;
+							    border-right: 0;
+	    						border-left: 0;
+	    						margin: 0;
+							}
+						}
+						.remove  {
+							padding: 0;
+							background: transparent;
+							color: $base-color;
+							font-size: 0.9em;
+							i {
+								padding-right: 3px;
+							}
+						}
+					}
+					.subtotal {
+						text-align: right;
+					}
+				}
+				.nested-grid {
+					margin: 0;
+					.nested {
+						margin: 10px 0;
+					}
+				}
+				.subtotal {
+					text-align: right;
+				}				
+			}
+		}
+	}
+}

@@ -1,22 +1,27 @@
 .btn, button {
-	outline: none;
-    background: $base-color;
-    color: $font-light;
-    border: none;
-    @include round(2px);
+    display: inline-block;
     position: relative;
     padding: 1em 2em;
-    line-height: 1em;
-    display: inline-block;
-    font-size: 0.875rem;
     cursor: pointer;
+
+    background: $base-color;
+    color: $font-light;
+    font-family: $font-family;
+    font-size: 0.875rem;
+    line-height: 1em;
     font-weight: normal;
     text-align: center;
+
+	outline: none;
+    border: none;
+    border-bottom: none;
+    border-bottom-color: tint($base-color, 15%);
+    @include round(2px);
+    
     -webkit-transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
     -moz-transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
     transition: all 0.18s cubic-bezier(0.11, 0.96, 0.78, 1);
-    border-bottom: none;
-    border-bottom-color: tint($base-color, 15%);
+
     &:hover, &.btn-hover {
     	text-decoration: none;
 	    color: $font-light;
@@ -70,6 +75,12 @@
 		}
 		&:hover {
 		    background: tint($btn-buy, 10%);
+		}
+		small {
+			display: block;
+		    font-size: 0.6em;
+		    opacity: .8;
+		    line-height: 1.5em;
 		}
 	}
 	&.bt-notifyme {		

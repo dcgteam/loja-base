@@ -3,6 +3,10 @@
     margin-bottom: 20px;
     border: 1px solid transparent;
     display: block;
+    &.small {
+        padding: 5px;
+        font-size: 0.8em;
+    }
     &.alert-success {
     	color: darken( $success, 40% );
         background-color: $success;
