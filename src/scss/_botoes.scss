@@ -1,4 +1,4 @@
-.btn, button {
+.btn, button:not(.no-style) {
     display: inline-block;
     position: relative;
     padding: 1em 2em;

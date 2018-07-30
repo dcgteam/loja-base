@@ -1,9 +1,11 @@
 .wd-checkout-basket {
 	.botoes-rodape {
-		.bt-keep-buying {
-			margin-top: 0;
-			margin-bottom: 34px;
-		}
+		.wd-checkout-basket-buttons {
+			.bt-keep-buying {
+				margin-top: 0;
+				margin-bottom: 34px;
+			}
+		}		
 	}
 	.wd-checkout-basket-buttons {
 		margin-bottom: 40px;
@@ -34,7 +36,7 @@
 			border: 1px solid $gray-semilight;
 
 			.grid-title {
-				background-color: #f1f1f1;
+				background-color: $gray-extralight;
 				li {
 					font-weight: bold;
 					padding: 5px 20px;
@@ -109,9 +111,164 @@
 						margin: 10px 0;
 					}
 				}
-				.subtotal {
+				> .subtotal {
 					text-align: right;
+					strong {
+						font-size: 1.4em;
+					}
 				}				
+			}
+		}
+	}
+	.basket-bottom {
+		border: 1px solid $gray-semilight;
+		border-top: 0;
+		padding: 15px;
+		background-color: $gray-extralight;
+		.wd-checkout-basket-discount, .wd-checkout-basket-deliveryoptions, .total, .total .price  {
+			border: 0;
+			background-color: transparent;
+		}
+		.wd-checkout-basket-discount, .wd-checkout-basket-deliveryoptions {
+			.header {
+				display: none;
+			}
+		}
+		.wd-checkout-basket-discount {
+			padding-right: 30px;
+			.btn-add-discount {
+				color: $base-color;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			#checkout-basket-discount-visible {
+				display: none;
+			}
+			.description {
+				height: auto;
+				label {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+				input {
+					margin: 0;
+					width: 60%;
+					float: left;
+					@include round-right(0);
+				}
+				.js-coupon-calc {
+					width: 20%;
+					padding: 1em;
+					@include round-left(0);
+				}
+			}
+			.grid {
+				padding: 15px 0;
+				.cupom {
+					> i {
+						display: none;
+					}
+
+				}
+				span {
+					display: block;
+					line-height: 1.6em;
+				}
+				.js-coupon-remove {
+					padding: 0;
+				    background: transparent;
+				    color: #06799F;
+				    font-size: 0.9em;
+				    width: auto;
+				    &:hover {
+				    	text-decoration: underline;
+				    }
+					i {
+						padding-right: 3px;
+					}
+				}
+				.price-item {
+					color: $price-off;
+				}
+			}
+		}
+		.wd-checkout-basket-deliveryoptions {
+			.description {
+     			text-align: right;
+				label {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+				.buscaCepCorreios {
+					padding-right: 15px;
+				}
+				input {
+					margin: 0;
+					width: 130px;
+					display: inline-block;
+					@include round-right(0);
+				}
+				.js-shipping-calc {
+					width: 90px;
+					padding: 1em;
+					float: right;
+					@include round-left(0);
+				}
+			}
+			.delivery-options {
+				.js-delivery-choice {
+					.photo {
+						width: 50px;
+						height: auto;
+						vertical-align: middle;
+					}
+					p {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.total {
+			border-top: 2px solid $gray-semilight;
+			padding: 15px 0 15px 30px;
+			height: auto;
+			.header {
+				position: initial;
+				margin: 0;
+				.title {
+					font-size: 1.5em;
+				}
+			}
+			.price {
+				position: initial;
+				width: 100%;
+				height: auto;
+				line-height: initial;
+				text-align: right;
+				font-weight: normal;
+				span {
+					font-size: 1em;
+				}
+				.list-price {
+					color: $gray-dark;
+					span {
+						font-size: 1em;
+					}
+				}
+				.savings {						
+					.total-discount {
+						display: block;
+						font-size: 2em;
+						color: $base-color;
+						font-weight: bold;
+					}
+					.variation-amount {
+						color: $price-off;
+						font-weight: bold;
+					}
+				}
 			}
 		}
 	}

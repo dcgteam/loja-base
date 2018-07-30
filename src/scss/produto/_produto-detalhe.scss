@@ -3,7 +3,7 @@
 		font-size: 1.3em;
 		padding-bottom: 15px;
 		margin-bottom: 15px;
-		border-bottom: 1px solid $gray-medium;
+		border-bottom: 1px solid $gray-semilight;
 	}
 	.head {
 		margin: 0 0 50px 0;
@@ -65,6 +65,9 @@
 						}
 					}
 				}
+				.wd-product-gift {
+					border: 0;
+				}
 				.wd-product-join {
 					margin-bottom: 20px;
 					ul {
@@ -81,7 +84,7 @@
 				.buy-box {
 					background-color: $gray-light;
 				    padding: 20px;
-				    border-top: 1px solid $gray-medium;
+				    border-top: 1px solid $gray-semilight;
 				    .wd-buy-button {
 				    	width: 100%;
 				    	margin: 15px 0;
@@ -186,7 +189,7 @@
 				overflow:hidden;
 				li {
 					background-color: $gray-light;
-					border: 1px solid $gray-medium;
+					border: 1px solid $gray-semilight;
 					border-bottom: 0;
 					padding: 15px;
 					margin-right: 5px;
@@ -207,7 +210,7 @@
 		.wd-content {
 			position: relative;
 			top: -1px;
-			border: 1px solid $gray-medium;
+			border: 1px solid $gray-semilight;
 			padding: 20px;
 		}
 	}
