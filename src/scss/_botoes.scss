@@ -1,4 +1,4 @@
-.btn, button:not(.no-style) {
+.btn, button {
     display: inline-block;
     position: relative;
     padding: 1em 2em;
@@ -94,6 +94,18 @@
 		}
 		&:hover {
 		    background: tint($gray-dark, 20%);
+		}
+	}
+	&.btn-remove {
+	    padding: 0;
+	    background: transparent;
+	    color: $base-color;
+	    font-size: 0.9em;
+		&:hover {
+		    color: $darken-color;
+		}		
+		i {
+			padding-right: 3px;
 		}
 	}
 }

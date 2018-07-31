@@ -7,25 +7,25 @@
         padding: 5px;
         font-size: 0.8em;
     }
-    &.alert-success {
+    &.success {
     	color: darken( $success, 40% );
         background-color: $success;
         border-color: darken( $success, 10% );
         @include round(3px);
     }
-    &.alert-info {
+    &.info {
     	color: darken( $info, 40% );
 	    background-color: $info;
 	    border-color: darken( $info, 10% );
         @include round(3px);
     }
-    &.alert-warning {
+    &.warning {
     	color: darken( $warning, 60% );
         background-color: $warning;
         border-color: darken( $warning, 20% );
         @include round(3px);
     }
-    &.alert-danger {
+    &.error {
         color: darken( $danger, 40% );
         background-color: $danger;
         border-color: darken( $danger, 10% );
