@@ -1,0 +1,97 @@
+.wd-checkout-basket-grid {
+	.grid {
+		border: 1px solid $gray-semilight;
+
+		.grid-title {
+			background-color: $gray-extralight;
+			li {
+				font-weight: bold;
+				padding: 5px 30px;
+				text-align: center;
+				&.product {
+					text-align: left;
+				}
+				&.subtotal {
+					text-align: right;
+				}
+			}
+		}
+		.grid-informations {
+			.item {
+				border-bottom: 1px solid $gray-semilight;
+				li.product {
+					padding: 0;
+				}
+				.photo {
+					margin: 0;
+					img {
+						max-width: 100%;
+						height: auto;
+					}
+				}
+				.data {
+					display: inline-block;
+					padding-left: 15px;
+					a {
+						display: block;
+						padding-bottom: 10px;
+					}
+					.warning {
+						@extend .alert;
+						@extend .warning;
+						@extend .small;
+					}
+				}
+				.price {
+					text-align: center;
+				}
+				.quantity {
+					text-align: center;
+					.change {
+						button {
+							background: $gray-extralight;
+						    color: $base-color;
+						    font-weight: normal;
+						    padding: 0.71em 0.9em;
+						    width: 34px;
+						    float: left;
+						    border: 1px solid $gray-semilight;						    
+							@include round(0);
+						}
+						input {
+							float: left;
+							width: 50px;
+							height: 36px;
+							@include round(0);
+						    border: 1px solid $gray-semilight;
+						    border-right: 0;
+    						border-left: 0;
+    						margin: 0;
+						}
+					}
+				}
+				.subtotal {
+					text-align: right;
+				}
+			}
+			.nested-grid {
+				margin: 0;
+				.nested {
+					margin: 10px 0;
+				}
+			}
+			.bottom-grid {
+				.text-subtotal, .subtotal {
+					text-align: right;
+					strong {
+						font-size: 1.4em;
+					}
+				}
+				.bt-clear-basket {
+					padding: 10px 0;
+
+				}	
+			}			
+		}
+	}
+}
