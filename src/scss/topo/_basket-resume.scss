@@ -4,7 +4,9 @@
 			font-size: 0;
 			&:before {
 				@include aws-icon("\f07a");
-				font-size: 30px;
+				font-size: 27px;
+				position: relative;
+				top: 4px;
 			}
 		}
 		.basket-size-wrapper {
@@ -13,8 +15,8 @@
 			width: 25px;
 			height: 25px;
 			position: absolute;
-		    left: 24px;
-		    bottom: -7px;
+		    left: 20px;
+		    bottom: -13px;
 		    font-size: 0.8em;
 		    text-align: center;
 		    line-height: 19px;

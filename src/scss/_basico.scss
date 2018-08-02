@@ -204,3 +204,13 @@ body {
 		@include wrapper-width(100%);
 	}	
 }
+@media screen and (max-width: 991px) {
+	.no-medium {
+		display: none !important;
+	}
+}
+@media screen and (max-width: 767px) {
+	.no-small {
+		display: none !important;
+	}
+}

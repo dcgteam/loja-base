@@ -119,15 +119,25 @@ header {
 	}
 }
 @media screen and (max-width: 992px) {
+	header .links {
+		display: none;
+	}
+	#logo h1 {
+		margin: 0;
+	}
 	.wd-profile-welcome-shopper {
 		display: none;
 	}
 	#top-search {
 		margin-top: 15px;
 	}
-}
-@media screen and (max-width: 885px) {
-	header .links {
-		display: none;
+	.icons-resume {
+		padding: 0;
+		.main-wishlist, .dropdown-cart {
+			padding: 0;
+		}
+		.dropdown-cart {
+			font-size: 1.2em;
+		}
 	}
 }

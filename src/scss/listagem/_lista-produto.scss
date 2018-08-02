@@ -13,6 +13,9 @@
 	.wd-product-list {
 		.wd-product-list {
 			height: auto;
+			li {
+				@include calculate($wrapper,$qtd-products-vitrine);
+			}
 		}
 	}
 }
@@ -20,7 +23,7 @@
 	.wd-product-list {
 		li{
 			min-height: 350px;
-			height: 350px;
+			height: 360px;
 			width: auto;
 			
 			.medias, .item-description {
@@ -40,16 +43,32 @@
 			}
 		}
 		.other {
+			.product {
+				margin-bottom: 10px;
+			    overflow: hidden;
+			    height: auto;
+			}
 			.name {
 				color:$font-dark;
 				display: block;
-				margin: 10px 0;
 			}
 			.medias{
 				@include grid-column(2);
+				@include grid-media($grid-pp){
+			       @include grid-column(12);
+			    }
+				.img {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
 			} 
 			.item-description {
 				@include grid-column(10);
+				@include grid-media($grid-pp){
+			       @include grid-column(12);
+			    }
 				.col {
 					padding: 0;
 				}
@@ -59,6 +78,9 @@
 				 .sale-price span {
 					font-size: 1em;
 					color: $font-dark;
+				}
+				.savings,.condition {
+					display: none;
 				}
 			}
 		}		
@@ -86,9 +108,14 @@
 
 @media screen and (max-width:768px) {
 	.wd-product-list-contextual {
-		.medias, .item-description {
-			display: block;
-			width: 100%;
-		}	
+		.wd-product-list{
+			li {
+				height: 585px;
+				.medias, .item-description {
+					display: block;
+					width: 100%;
+				}	
+			}
+		}
 	}
 }
