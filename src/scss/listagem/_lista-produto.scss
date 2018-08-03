@@ -1,4 +1,3 @@
-
 .wd-product-list {
 	.wd-content {
 		> ul  {
@@ -106,6 +105,14 @@
 	}
 }
 
+@media screen and (max-width: 992px) {
+	.grid-products #content-wrapper {
+		margin: 0;
+	}
+	.wd-browsing-breadcrumbs, .wd-browsing-grid-sorter {
+		display: none;
+	}
+}
 @media screen and (max-width:768px) {
 	.wd-product-list-contextual {
 		.wd-product-list{

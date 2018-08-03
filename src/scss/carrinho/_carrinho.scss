@@ -214,4 +214,17 @@
 			}
 		}
 	}
+	.empty {
+		background-color: #fff;
+		font-size: 1.5em;
+		&:before {
+			content: ':(';
+			font-size: 4em;
+			display: block;
+			color: $base-color;
+		}
+		span, a {
+			display: block;
+		}
+	}
 }

@@ -1,9 +1,10 @@
 .product-detail {
 	.title, .click-msg {
-		font-size: 1.3em;
+		font-size: 1.4em;
 		padding-bottom: 15px;
 		margin-bottom: 15px;
 		border-bottom: 1px solid $gray-semilight;
+		font-weight: normal;
 	}
 	.head {
 		margin: 0 0 50px 0;
@@ -67,6 +68,34 @@
 				}
 				.wd-product-gift {
 					border: 0;
+					.title {
+						float: left;
+    					width: 100%;
+					}
+					.wd-product-gift-inline {
+						float: left;
+    					width: 100%;
+    					ul {
+    						li {
+    							width: 100%;
+							    padding: 15px 0;
+							    border: 0;
+							    border-bottom: 1px dashed $gray-medium;
+							    input {
+							    	float: left;
+							    	margin-right: 15px;							    	
+							    }
+							    .wd-gift-title {
+							    	display: inline-block;
+								    vertical-align: top;
+								    margin-left: 15px;
+							    }
+							    &:last-child {
+							    	border-bottom: 0;
+							    }
+    						}
+    					}
+					}
 				}
 				.wd-product-join {
 					margin-bottom: 20px;
@@ -85,6 +114,10 @@
 					background-color: $gray-light;
 				    padding: 30px;
 				    border-top: 1px solid $gray-semilight;
+				    .wd-product-amount {
+				    	margin: 10px 0;
+				    	@include input-quantity(45px,0.6em 0.6em,60px,38px, 1.2em);
+				    }
 				    .wd-buy-button {
 				    	width: 100%;
 				    	margin: 15px 0;
@@ -137,6 +170,7 @@
 				}
 			}
 			.wd-product-payment-options {
+				margin: 15px 0;
 				button {
 					@extend .btn-outline;
 					&:before {
@@ -246,5 +280,48 @@
 				display: none;
 			}
 		}
+	}
+	.produto-flutuante {
+		position: fixed;
+	    bottom: 0;
+	    width: 100%;
+	    left: 0;
+	    background-color: $gray-light;
+	    padding: 20px 0;
+	    border-top: 1px solid $gray-semilight;
+	    z-index: 100;
+	    img, .name {
+	    	display: inline-block;
+	    	vertical-align: middle;
+	    }
+	    img {
+	    	border: 1px solid $gray-semilight;
+	    }
+	    .name {
+	    	padding-left: 15px;
+	    	font-size: 1.15em;
+	    }
+	    .button {
+	    	text-align: right;
+	    }
+	    .wd-product-price-description, .wd-buy-button {
+	    	display: inline-block;
+	    	padding: 0;
+	    	margin: 0;
+	    	width: auto;
+	    	vertical-align: middle;
+	    	text-align: right;
+	    }
+	    .wd-product-price-description {
+	    	.condition, .savings {
+	    		display: none;
+	    	}
+	    }
+	    .wd-buy-button {
+	    	padding-left: 15px;
+	    	button {
+	    		@extend .btn-big;
+	    	}
+	    }
 	}
 }

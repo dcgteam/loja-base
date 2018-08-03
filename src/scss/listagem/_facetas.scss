@@ -28,8 +28,46 @@
 		}
 	}	
 }
+#showFacets {
+	display: none;
+}
 @media screen and(max-width: 992px) {
 	#left {
-		display: none;
+		width: 0;
+	    &.active {	 	
+	    	.wd-facet-group {
+		    	position: fixed;
+			    top: 0;
+			    right: 0;
+			    z-index: 99;
+			    width: 100%;
+			    height: 100%;
+			    overflow-y: scroll;
+			    overflow-x: hidden;
+	    	}
+	    }
+	}
+	#showFacets {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		z-index: 100;
+		&:after {
+			content: ' Filtrar';
+		}
+		.icon:before {
+			@include aws-icon("\f0b0");
+		}
+		&.active {
+			bottom: initial;
+			top: 0;
+			&:after {
+				content: ' Fechar';
+			}
+			.icon:before {
+				@include aws-icon("\f00d");
+			}
+		}
 	}
 }

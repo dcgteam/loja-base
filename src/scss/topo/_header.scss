@@ -20,6 +20,14 @@ header {
 	}
 	.main-bar {
 		padding: 20px 0;
+		&.flutuante {
+			position: fixed;
+			top: 0;
+			background-color: #fff;
+			z-index: 55;
+		    width: 100%;
+		    box-shadow: 1px 1px 1px 1px $gray-semilight;
+		}
 		.wd-search {
 			input {
 				@include round-right(0);
