@@ -44,6 +44,18 @@
     font-weight:$weight;
 }
 
+@mixin flag($display: table,$padding: 0.3em 0.6em, $font-size:0.8em,$bg-color:$flag, $color: $font-light, $margin:0 0 3px 0, $round: 2px) {
+    display: $display;
+    padding: $padding;
+    font-size: $font-size;
+    text-transform: uppercase;
+    background-color:$bg-color;
+    color: $color;
+    text-align: center;
+    margin: $margin;
+    @include round($round);
+}
+
 @mixin input-quantity($button-width,$button-padding,$input-width,$input-height, $size-btn: $font-size) {
   button {
     background: $gray-extralight;

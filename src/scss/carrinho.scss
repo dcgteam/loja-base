@@ -1,8 +1,11 @@
 @import './bower_components/bourbon/app/assets/stylesheets/_bourbon';
+@import './bower_components/neat/core/_neat';
+
 @import 'configs';
 @import 'mixins';
 @import 'alertas';
 @import 'botoes';
+@import 'flags';
 @import 'carrinho/carrinho';
 @import 'carrinho/desconto-progressivo';
 @import 'carrinho/grid';

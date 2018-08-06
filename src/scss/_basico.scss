@@ -214,3 +214,8 @@ body {
 		display: none !important;
 	}
 }
+@media screen and (min-width: 992px) {
+	.no-desktop {
+		display: none !important;
+	}
+}

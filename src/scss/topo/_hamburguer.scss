@@ -46,7 +46,7 @@
 					>li {
 						margin: 0;
 						&.has-children {
-							h3 > a {
+							h3 {
 								.icon {
 									float: right;
 									&::after {
@@ -72,6 +72,16 @@
 						}
 						a {
 							color: $font-dark;
+						}
+						&.active {
+							h3 {
+								.icon::after {
+									@include aws-icon("\f0d8");
+								}
+							}
+							.level-2 {
+								display: block;
+							}
 						}
 						.level-2 {
 							display: none;

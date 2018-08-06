@@ -1,11 +1,24 @@
 .wd-checkout-basket {
 	.botoes-rodape {
 		.wd-checkout-basket-buttons {
+			@include grid-media($grid-pp){
+				padding: 0 15px;
+			}
+			button {
+				@include grid-media($grid-pp){
+					width: 100% !important;
+				}
+			}
 			.bt-keep-buying {
 				margin-top: 0;
 				margin-bottom: 34px;
 			}
 		}		
+	}
+	.botoes-topo {
+		@include grid-media($grid-pp){
+			display: none;
+		}
 	}
 	.wd-checkout-basket-buttons {
 		margin-bottom: 40px;
@@ -85,6 +98,7 @@
 				input {
 					margin: 0;
 					width: 60%;
+					max-width: 200px;
 					float: left;
 					@include round-right(0);
 				}
@@ -92,6 +106,9 @@
 					width: 20%;
 					padding: 1em;
 					@include round-left(0);
+					@include grid-media($grid-pp){
+				       width: 40%;
+				    }
 				}
 			}
 			.grid {
@@ -127,30 +144,45 @@
 		.wd-checkout-basket-deliveryoptions {
 			.description {
      			text-align: right;
+				@include grid-media($grid-smartphone){
+			       text-align: left;
+			    }
 				label {
 					width: 100%;
 					margin-bottom: 15px;
 				}
 				.buscaCepCorreios {
 					padding-right: 15px;
+					@include grid-media($grid-smartphone){
+			       		display: block;
+			       		margin-bottom: 15px;
+					}
 				}
 				input {
 					margin: 0;
 					width: 130px;
 					display: inline-block;
 					@include round-right(0);
+					@include grid-media($grid-smartphone){
+				       	float: left;
+					}
 				}
 				.js-shipping-calc {
 					width: 90px;
 					padding: 1em;
 					float: right;
 					@include round-left(0);
+					@include grid-media($grid-smartphone){
+				       	float: left;
+					}
 				}
 				.price {
 					display: none;
 				}
 			}
 			.delivery-options {
+				margin-top: 15px;
+    			float: left;
 				.js-delivery-choice {
 					.photo {
 						width: 50px;

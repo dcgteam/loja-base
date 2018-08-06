@@ -9,11 +9,13 @@
 		}
 	}
 	&.wd-browsing-product-carousel, &.wd-product-list, &.wd-product-featured-list {
+		margin-top: 30px;
 		.wd-header {
 			padding: 15px;
 			margin-bottom: 10px; 
 			font-size: 2em;
 		    position: relative;
+		    border-bottom: 1px solid $gray-semilight;
 			.wd-icon {
 				&:before {
 					@include aws-icon("\f054");
@@ -40,6 +42,106 @@
 	.last {
 		strong {
 			font-weight: bold;
+		}
+	}
+}
+
+/* carrossel de marcas */
+.wd-brand-carousel {
+	li {
+		width: auto;
+		margin: 0 10px 0 0;
+	}
+	.jcarousel-control-prev, .jcarousel-control-next {
+		line-height: 60px;
+		i {
+			color: $base-color;
+			font-size: 30px;
+			top: 15px;
+			&:hover {
+				color: $darken-color;
+			}
+		}
+	}
+}
+
+/* banners */
+.wd-marketing-banner{
+	@include grid-media($grid-smartphone){
+		height: auto !important;
+		line-height: normal !important;
+		max-width: 100%;
+	}
+	.banner-wrapper, a {
+		@include grid-media($grid-smartphone){
+			max-width: 100%; 
+			height: auto !important;
+		}
+	}
+	&.slider {
+		.slider-controller {
+			position: absolute;
+			right: 0;
+		    left: 0;
+		    bottom: 0;
+		    display: block;
+		    margin: 0;
+		    padding: 0.5em 2em;
+		    line-height: normal;
+		    text-align: center;
+		    li {
+		    	font-size: 0.8rem;
+			    float: none;
+			    display: inline-block;
+			    background: $font-light;
+			    color: $gray-dark;
+			    border: none;
+			    height: 32px;
+			    line-height: 32px;
+			    width: 32px;
+			    border-radius: 100%;
+			    font-weight: 700;
+			    box-shadow: none;
+			    @include grid-media($grid-smartphone) {
+			    	height: 20px;
+				    line-height: 20px;
+				    width: 20px;
+			    }
+			    &.current {
+			    	background-color: $base-color;
+			    	color: $font-light;
+			    }
+		    }
+		}
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		@include grid-media($grid-smartphone){
+			width: 100%;
+		}
+	}
+	&.grid {
+		padding: 0;
+		float: left;
+		margin-bottom: 20px;
+		@include grid-media($grid-m){
+			max-width: 100%;
+			div {
+				text-align:center;
+			}
+		}
+		
+		&:nth-child(2n) {
+			float: right;
+		}
+	}
+}
+@media screen and (max-width: 1079px) {
+	.wd-marketing-banner {
+		a, .banner-wrapper {
+			text-align: center !important;
 		}
 	}
 }

@@ -14,7 +14,14 @@
 			height: auto;
 			li {
 				@include calculate($wrapper,$qtd-products-vitrine);
+				margin: 0;
 			}
+		}
+	}
+	.jcarousel-control-next, .jcarousel-control-prev {
+		background: transparent;
+		i {
+			font-size: 1em;
 		}
 	}
 }
@@ -113,7 +120,7 @@
 		display: none;
 	}
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:575) {
 	.wd-product-list-contextual {
 		.wd-product-list{
 			li {

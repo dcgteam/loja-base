@@ -18,7 +18,7 @@
     .footer-newsletter {
     	text-align: center;
     	.wd-marketing-newsletter {
-    		width: 500px;
+    		max-width: 500px;
     		margin: 0 auto;
     		.input-name-marketing-newsletter, label {
     			display: none;
@@ -26,6 +26,9 @@
     		.input-email-marketing-newsletter {
 				width: 79%;
 				float: left;
+                @include grid-media($grid-smartphone) {
+                    width: 70%;
+                }
                 input {
                     @include round-right(0);
                 }
@@ -33,6 +36,9 @@
 			.input-button-marketing-newsletter {
 				float: left;
 				width: 21%;
+                @include grid-media($grid-smartphone) {
+                    width: 30%;
+                }
 				button {
                     @extend .btn-wide;
                     @include round-left(0);
@@ -45,14 +51,23 @@
     		text-align: center;
     	}
     	.contato {
-	    	width: 740px;
+	    	max-width: 740px;
 	    	margin: 0 auto;
     		padding: 30px 0 15px 0;
     		overflow: hidden;
+            > div {
+                @include grid-media($grid-smartphone) {
+                    text-align: center;
+                    margin: 15px 0;
+                }
+            }
     		i {
     			float: left;
 			    font-size: 44px;
 			    margin-right: 18px;
+                @include grid-media($grid-pp) {
+                    display: none
+                }
     		}
     		strong {
     			display: block;
@@ -118,7 +133,7 @@
             text-align: center;
         }
     	.box {
-    		width: 450px;
+    		max-width: 450px;
     		margin: 0 auto;
     		overflow: hidden;
     	}
@@ -159,16 +174,5 @@
     		padding-top: 20px;
     		overflow: hidden;
     	}
-    }
-}
-@media screen and (max-width: 992px) {
-    footer .footer-category .footer-menu {
-        display: none;
-    }
-}
-@media screen and (max-width: 768px) {
-    footer .footer-atendimento .contato > div {
-        text-align: center;
-        margin: 15px 0;
     }
 }

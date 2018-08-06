@@ -1,4 +1,5 @@
 .product-detail {
+	padding: 0 15px;
 	.title, .click-msg {
 		font-size: 1.4em;
 		padding-bottom: 15px;
@@ -23,8 +24,19 @@
 		.information {
 			padding-left: 30px;
 			padding-right: 0;
+			@include grid-media($grid-smartphone) {
+				padding: 0;
+			}
 			.name {
 				padding: 0;
+			}
+			.logo-brand {
+				img {
+					max-width: 80px;
+				}
+			}
+			.wd-product-rating.wd-widget-js {
+				padding-top: 12px;
 			}
 			.product-information {
 				color: $gray-dark;
@@ -46,12 +58,19 @@
 					padding: 0;
 				}
 				
+				@include grid-media($grid-smartphone) {
+					padding: 0;
+				}
 				.wd-product-variations {
 					width: 100%;
 					margin-bottom: 20px;
 					.options {
 						max-width: 200px;
+						.variation-error {
+							@extend .alert.error;
+						}
 					}
+
 				}
 				.wd-product-buy-grid, .single-variations, .multiple-variations {
 					width: 100%;
@@ -110,13 +129,19 @@
 			.buy {
 				padding-right: 0;
 				margin-top: 30px;
+				@include grid-media($grid-smartphone) {
+					padding: 0;
+				}
 				.buy-box {
 					background-color: $gray-light;
 				    padding: 30px;
 				    border-top: 1px solid $gray-semilight;
 				    .wd-product-amount {
-				    	margin: 10px 0;
+				    	margin: 20px 0 10px;
 				    	@include input-quantity(45px,0.6em 0.6em,60px,38px, 1.2em);
+				    	btn {
+				    		font-weight: bold;
+				    	}
 				    }
 				    .wd-buy-button {
 				    	width: 100%;
@@ -155,18 +180,18 @@
 				    	}
 				    }
 				}
-				.wd-product-deliveryfee {
-					width: 100%;
-					margin: 15px 0;
-					label {
-						font-size: 1.3em;
-						padding-bottom: 15px;
-					}
-					.input-wrapper, .button-wrapper {
-						display: inline-block;
-						vertical-align: bottom;
-						margin-bottom: 0;
-					}
+			}
+			.wd-product-deliveryfee {
+				width: 100%;
+				margin: 15px 0;
+				label {
+					font-size: 1.3em;
+					padding-bottom: 15px;
+				}
+				.input-wrapper, .button-wrapper {
+					display: inline-block;
+					vertical-align: bottom;
+					margin-bottom: 0;
 				}
 			}
 			.wd-product-payment-options {

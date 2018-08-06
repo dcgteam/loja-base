@@ -29,8 +29,11 @@ header {
 		    box-shadow: 1px 1px 1px 1px $gray-semilight;
 		}
 		.wd-search {
-			input {
-				@include round-right(0);
+			.input-wrapper {	
+				margin-bottom: 0;			
+				input {
+					@include round-right(0);
+				}
 			}
 			button {
 			    position: absolute;
@@ -120,6 +123,9 @@ header {
 		}
 	}
 }
+#logo h1 {
+	margin: 0;
+}
 
 @media screen and (min-width: 992px) {
 	.icons-resume {
@@ -129,9 +135,6 @@ header {
 @media screen and (max-width: 992px) {
 	header .links {
 		display: none;
-	}
-	#logo h1 {
-		margin: 0;
 	}
 	.wd-profile-welcome-shopper {
 		display: none;

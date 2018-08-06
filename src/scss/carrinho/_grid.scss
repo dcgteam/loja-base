@@ -19,6 +19,7 @@
 		.grid-informations {
 			.item {
 				border-bottom: 1px solid $gray-semilight;
+				margin-bottom: 0;
 				li.product {
 					padding: 0;
 				}
@@ -42,8 +43,15 @@
 						@extend .small;
 					}
 				}
+				.is-gift.label {					
+					@include flag(inline);
+				}
 				.price {
 					text-align: center;
+					del {
+						color: $gray-dark;
+						font-size: 0.8em;
+					}
 				}
 				.quantity {
 					text-align: center;
@@ -56,9 +64,48 @@
 				}
 			}
 			.nested-grid {
+				padding: 0;
 				margin: 0;
+				border-bottom: 1px solid $gray-semilight;
 				.nested {
-					margin: 10px 0;
+					margin: 0;
+					margin-left: 45px;
+					max-width: -webkit-calc(100% - 45px);
+					max-width: -moz-calc(100% - 45px);
+					max-width: calc(100% - 45px);
+					border-left: 1px solid $gray-semilight;
+					border-bottom: 0;
+					&:first-child {
+						&::before {
+						    content: 'Itens do Kit';
+						    position: absolute;
+						    top: -19px;
+						    font-weight: bold;
+						}
+					}
+					.product {
+						padding-left: 45px;
+						@include grid-media($grid-tablet-desktop) {					
+							max-width: -webkit-calc(50% - 25px);
+							max-width: -moz-calc(50% - 25px);
+							max-width: calc(50% - 25px);
+						}
+						&::before {
+							content: '';
+						    width: 30px;
+						    height: 1px;
+						    background: $gray-semilight;
+						    display: block;
+						    position: absolute;
+						    left: 0;
+						    top: 45px;
+						}
+					}
+					.subtotal {
+						strong {
+							display: none;
+						}
+					}
 				}
 			}
 			.bottom-grid {
@@ -75,4 +122,8 @@
 			}			
 		}
 	}
+}
+
+@media screen and (min-width: 768px) {
+
 }

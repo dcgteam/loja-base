@@ -60,3 +60,13 @@ $grid-gg: (
      gutter: 20px,
      media: "screen and (min-width: 1180px)"
 );
+$grid-smartphone: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (max-width:767px)"
+);
+$grid-tablet-desktop: (
+     columns: 12,
+     gutter: 20px,
+     media: "screen and (min-width:768px)"
+);
