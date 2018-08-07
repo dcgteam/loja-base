@@ -1,7 +1,24 @@
 .wd-widget {
 	width: 100%;
 	.wd-product-associations {
-		
+		.wd-content {
+			ul {
+				li {
+					width: inherit;					
+		    		text-align: left;
+					.wd-product-line-medias {
+						.thumb, img {
+							max-width: 100%;
+							height: auto;
+
+						}
+					}
+					.price-difference {
+						text-align: center;
+					}
+				}
+			}
+		}
 		&:not(.cross-sell) {
 			.wd-header {
 		    	padding: 20px;
@@ -9,26 +26,43 @@
 		    		font-size: 1.8em;
 		    	}
 		    }
-		    .wd-content {
-		    	ul li {
-		    		text-align: left;
-		    	}
-		    }
 		}
 		&.cross-sell{
 			.wd-content {
 				form  {
 					ul {
-						@include grid-column(8);
 						li {
-							@include grid-column(6);
+							&.first {
+								position: relative;
+								&::after {
+									content: '+';
+									font-size: 4em;
+									position: absolute;
+									right: -16px;
+									top: 30%;
+								}
+							}
 						}
 					}
 					.cross-sell-footer {
-						@include grid-column(4);
 						background-color: #fff;
-	     				margin-top: 80px;
+	     				padding-top: 80px;
 	     				text-align: center;
+	     				position: relative;
+	     				&::before {
+	     					content: '=';
+							font-size: 4em;
+							position: absolute;
+							left: -20px;
+							top: 30%;
+							@include grid-media($grid-smartphone){
+								display:none;
+							}
+	     				}
+	     				@include grid-media($grid-smartphone){
+	     					padding-top: 20px;
+	     					background-color: $gray-light;
+	     				}
 	     				.no-variation-selected {
 	     					font-size: 1.3em;
 	     					height: auto;

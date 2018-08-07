@@ -1,5 +1,4 @@
 .product-detail {
-	padding: 0 15px;
 	.title, .click-msg {
 		font-size: 1.4em;
 		padding-bottom: 15px;
@@ -251,7 +250,8 @@
 					border: 1px solid $gray-semilight;
 					border-bottom: 0;
 					padding: 15px;
-					margin-right: 5px;
+					margin: 0;
+					margin-left: 5px;
 					height: 53px;
 					&.wd-selected {
 						background-color: $font-light;
@@ -269,8 +269,11 @@
 		.wd-content {
 			position: relative;
 			top: -1px;
-			border: 1px solid $gray-semilight;
-			padding: 20px;
+			.wd-descriptions-panel  {
+				border: 1px solid $gray-semilight;
+				padding: 20px;
+				margin: 0;
+			}
 		}
 	}
 	.wd-product-reviews {

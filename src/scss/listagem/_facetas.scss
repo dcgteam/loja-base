@@ -1,31 +1,88 @@
 #left {
 	padding: 0;
 	.wd-facet-group {
-		.facets, .facet-type-range .range-wrapper {
-			background: #fff;
+		.facets {
+			.facet-type {
+				.facet-type-list {
+					.facet-title {
+						overflow: hidden;
+						&::before {
+    						display: none;
+						}
+						&::after {
+							@include aws-icon("\f077");
+							float: right;
+							position: relative;
+							top: 3px;
+						}
+						&.facet-closed {							
+							&::after {
+								@include aws-icon("\f078");
+							}
+						}
+						h3 {
+							float: left;
+						}
+					}
+					.option-title {
+						color: $base-color;
+					}
+				}
+				.facet-type-range .range-wrapper {
+					background: #fff;
+					border: 0;
+					* {
+						box-shadow: none;
+						color: $font-dark;
+					}
+					.handler {
+						.icon {
+							@include round(100%);
+							background-color: $font-light;
+							width: 12px;
+							height: 12px;
+							border: 1px solid $gray-medium;
+						}
+					}
+					.defined-range {
+						background: $lighten-color;
+					}
+					.submit {
+						@extend .btn;
+						@extend .btn-wide;
+						margin-top: 35px;
+					}
+				}
+			}			
+		}
+		.selected-facets {
+			background: $gray-extralight;
 			border: 0;
-			* {
-				box-shadow: none;
-				color: $font-dark;
+			@include round(2px);
+			&::before {
+				text-transform: uppercase;
+				font-size: 0.9em;
 			}
-			.handler {
-				.icon {
-					@include round(100%);
-					background-color: $font-light;
-					width: 12px;
-					height: 12px;
-					border: 1px solid $gray-medium;
+			.selected-facet {
+				border: 0;
+				border-bottom: 1px solid $gray-light;
+				@include round(0);
+				&:last-child() {
+					border: 0;
+				}
+				.selected-facet-name {
+					background: none;
+				}
+				ul {
+					li {
+						margin-top: 0;
+						margin-bottom: 5px;
+						border: 0;
+						font-weight: normal;
+					}
 				}
 			}
-			.defined-range {
-				background: $lighten-color;
-			}
-			.submit {
-				@extend .btn;
-				@extend .btn-wide;
-				margin-top: 35px;
-			}
-		}
+		}		
 	}	
 }
 #showFacets {

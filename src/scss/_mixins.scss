@@ -1,5 +1,4 @@
-// Single side border-radius
-
+/* bordas arredondadas */
 @mixin round($radius: 5px){
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
@@ -21,16 +20,21 @@
     border-top-right-radius: $radius;
     border-bottom-right-radius: $radius;
 }
+
+/* largura de wrapper */
 @mixin wrapper-width($width: $wrapper) {
   width: $width;
   max-width: $width;
 }
 
+/* calcula a largura de um elemento dividindo a quantidade de itens pela largura total disponível */
 @mixin calculate($fullWidth, $quantity) {
   $width : $fullWidth / $quantity;
   width: $width;
 }
 
+// gera icone usando FontAwesome
+// necessario inserir dentro de um pseudoelemento
 @mixin aws-icon($icon, $weight : bold) {
     content: $icon;    
     font-family: "Font Awesome 5 Free";
@@ -44,6 +48,7 @@
     font-weight:$weight;
 }
 
+/* flags */
 @mixin flag($display: table,$padding: 0.3em 0.6em, $font-size:0.8em,$bg-color:$flag, $color: $font-light, $margin:0 0 3px 0, $round: 2px) {
     display: $display;
     padding: $padding;
@@ -56,6 +61,7 @@
     @include round($round);
 }
 
+/* usado no carrinho e detalhe do produto para estilizar o input de quantidade */
 @mixin input-quantity($button-width,$button-padding,$input-width,$input-height, $size-btn: $font-size) {
   button {
     background: $gray-extralight;

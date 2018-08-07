@@ -112,15 +112,7 @@
 	}
 }
 
-@media screen and (max-width: 992px) {
-	.grid-products #content-wrapper {
-		margin: 0;
-	}
-	.wd-browsing-breadcrumbs, .wd-browsing-grid-sorter {
-		display: none;
-	}
-}
-@media screen and (max-width:575) {
+@media screen and (max-width:575px) {
 	.wd-product-list-contextual {
 		.wd-product-list{
 			li {

@@ -18,15 +18,34 @@ header {
 			margin-right: 5px;
 		}
 	}
-	.main-bar {
-		padding: 20px 0;
-		&.flutuante {
+	&.flutuante {
+		.top-bar {
+			margin-bottom: 82px;
+		}
+		.main-bar {
 			position: fixed;
 			top: 0;
 			background-color: #fff;
 			z-index: 55;
 		    width: 100%;
 		    box-shadow: 1px 1px 1px 1px $gray-semilight;
+		}
+	}
+	.main-bar {
+		padding: 20px 0;
+		 
+		#logo {
+			h1 {
+				margin: 0;
+				a {
+				    background-image: url(/custom/content/themes/Base/Imagens/logo.png);
+				    background-repeat: no-repeat;
+				    display: block;
+				    width: 170px;
+				    height: 40px;
+				    font-size: 0;
+				}
+			}
 		}
 		.wd-search {
 			.input-wrapper {	
@@ -122,9 +141,6 @@ header {
 			}
 		}
 	}
-}
-#logo h1 {
-	margin: 0;
 }
 
 @media screen and (min-width: 992px) {

@@ -5,10 +5,13 @@ body {
 	margin: 0;
     padding: 0;
     #footer, #header, #middle {
-    min-width: auto;
+    	min-width: auto;
 	}
 	#footer {
 		margin-top: 50px;
+	}
+	#middle {
+		padding: 15px;
 	}
 	a {
 		text-decoration: none;
@@ -175,13 +178,8 @@ body {
 	.hide {
 		display: none;
 	}
-	#logo a {
-	    background-image: url(/custom/content/themes/Base/Imagens/logo.png);
-	    background-repeat: no-repeat;
-	    display: block;
-	    width: 170px;
-	    height: 40px;
-	    font-size: 0;
+	&.columns-2-left #content-wrapper {
+		margin-right: 0;
 	}
 }
 .wrapper, .grid-products #middle, [class^="context-category"] #middle {
