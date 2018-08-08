@@ -90,29 +90,7 @@
 							}
 						}	
 						.divisor {
-					    	right: -27px;
-					    	.top, .bottom {
-					    		background: $gray-medium;
-					    	}
-					    	.bottom {
- 								min-height: 115px;
-					    	}
-					    	.top {
- 								min-height: 116px;
-					    	}
-					    	.or {
-					    		color: $gray-medium;
-					    		border: 1px solid $gray-medium;
-					    		@include round(100%);
-							    right: 13px;
-							    bottom: 6px;
-							    padding: 5px;
-					    	}
-					    }
-					    &:nth-child(4n) {
-					    	.divisor {
-					    		display: none;
-					    	}
+					    	display: none;
 					    }						
 					}
 				}
@@ -120,7 +98,7 @@
 		}
 		.message-box {
 			top: 15px;
-			.next-range, .without-gift {
+			.wrapper.next-range, .wrapper.without-gift {
 				position: initial;
 				text-align: center;
 				border: 0;
@@ -133,6 +111,9 @@
 					display: none;
 				}
 			}
+		}
+		.overlay {
+			height: 100%;
 		}
 	}	
 }

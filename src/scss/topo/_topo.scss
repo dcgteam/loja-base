@@ -33,20 +33,6 @@ header {
 	}
 	.main-bar {
 		padding: 20px 0;
-		 
-		#logo {
-			h1 {
-				margin: 0;
-				a {
-				    background-image: url(/custom/content/themes/Base/Imagens/logo.png);
-				    background-repeat: no-repeat;
-				    display: block;
-				    width: 170px;
-				    height: 40px;
-				    font-size: 0;
-				}
-			}
-		}
 		.wd-search {
 			.input-wrapper {	
 				margin-bottom: 0;			
@@ -143,11 +129,6 @@ header {
 	}
 }
 
-@media screen and (min-width: 992px) {
-	.icons-resume {
-		order: 13;
-	}
-}
 @media screen and (max-width: 992px) {
 	header .links {
 		display: none;

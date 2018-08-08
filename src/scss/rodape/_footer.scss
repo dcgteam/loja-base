@@ -13,16 +13,16 @@
     background: #f6f6f6;
     h2 {
     	text-align: center;
+        padding: 0 15px;
     }
-    
     .footer-newsletter {
     	text-align: center;
     	.wd-marketing-newsletter {
     		max-width: 500px;
     		margin: 0 auto;
-    		.input-name-marketing-newsletter, label {
-    			display: none;
-    		}
+            .wd-header, .input-name-marketing-newsletter, label, p {
+                display: none;
+            }
     		.input-email-marketing-newsletter {
 				width: 79%;
 				float: left;
@@ -47,9 +47,6 @@
     	}
     }
     .footer-atendimento {
-    	h2 {
-    		text-align: center;
-    	}
     	.contato {
 	    	max-width: 740px;
 	    	margin: 0 auto;
@@ -87,12 +84,15 @@
     		text-align: center;
     	}
     }
-    .footer-category {
+    .footer-category {        
+        h2 {
+            text-align: left;
+            padding: 0;
+        }
     	.wd-category-menu {
     		.wd-title {
-				font-size: 1.4em;
-				color: $font-dark;  
-				margin-bottom: 1.6em; 
+				@extend h2;
+                font-weight: bold;
     		}
     		.level-1 {
     			> li {
@@ -100,7 +100,6 @@
     				width: 33.33%;
     				> h3 {
     					margin-bottom: 10px;
-    					font-weight: bold;
     				}
     				h4 {
     					font-size:
@@ -111,20 +110,44 @@
     	}
     	.cms-page-menu {
     		float:right;
-    		.root {
-    			> a {
-    				display: block;
-    				font-size: 1.4em;
-    				color: $font-dark;  
-    				margin-bottom: 1.6em;  				
-    			}
-    			li {
-    				margin: 0;
-    				margin-top: 8px;
-    				a {
-    					font-size: 0.9em
-    				}
-    			}
+            .cms-page {
+                &.active {
+                    small {
+                        @include grid-media($grid-smartphone) {
+                            &::after {
+                                @include aws-icon("\f106");
+                            }
+                        }
+                    }
+                    .wd-page-menu {
+                        > ul {
+                            display: block;
+                        }
+                    }
+                }
+                small {
+                    @include grid-media($grid-smartphone) {
+                        &::after {
+                            @include aws-icon("\f107");
+                            float: right;
+                        }
+                    }
+                }
+                .wd-page-menu {
+                    > ul {
+                        padding-bottom: 15px;                    
+                        @include grid-media($grid-smartphone) {
+                            display: none;
+                        }
+                        li {                        
+                            margin: 0;
+                            margin-top: 15px;
+                            a {
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+                }
     		}
     	}
     }
@@ -140,8 +163,7 @@
     	.icons {
     		a {
     			padding: 1.3em 0.8em;
-    			display: inline-block;
-    			vertical-align: middle;
+                display: inline-block;
     		}
     		i {
     			font-size: 30px;
@@ -155,11 +177,46 @@
     .certificados {
     	border-top: 1px solid $gray-medium;
     	padding: 30px 0;
+        .col {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
         .title, .shields {
             float: left;
         }
         .title {
             margin-right: 10px;
+        }
+        .shields {
+            > a {
+                float: left;
+                margin: 5px 10px;
+                &.shield-letsencrypt {
+                    width: 77px;
+                    height: 63px;
+                    background-image: url(/custom/content/themes/#{$theme-path}/Imagens/lets-encrypt.png);
+                }
+            }
+            .payment {
+                width: 32px;
+                height: 20px;
+                margin: 5px;                
+                float: left;
+                background-color: #FFF;                
+                background-repeat: no-repeat;
+                &.payment-pay-amex {
+                    background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-amex.png);
+                }
+                &.payment-pay-code {
+                    background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-code.png);
+                }
+                &.payment-pay-master {
+                    background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-master.png);
+                }
+                &.payment-pay-visa {
+                    background-image: url(/custom/content/themes/#{$theme-path}/Imagens/pay-visa.png);
+                }
+            }
         }
     }
     .assinatura {
@@ -171,14 +228,21 @@
 	    		overflow: hidden;
     		}
     	}
+        .aboutme {
+            p {
+                margin: 0;
+            }
+        }
     	.copyright, .creators {
     		text-align: center;
     	}
     	.creators {
-    		width: 300px;
-    		margin: 0 auto;
     		padding-top: 20px;
     		overflow: hidden;
+            small {
+                display: block;
+                margin-bottom: 5px;
+            }
     	}
     }
 }

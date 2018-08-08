@@ -10,9 +10,6 @@ body {
 	#footer {
 		margin-top: 50px;
 	}
-	#middle {
-		padding: 15px;
-	}
 	a {
 		text-decoration: none;
 		color: $base-color;
@@ -181,6 +178,16 @@ body {
 	&.columns-2-left #content-wrapper {
 		margin-right: 0;
 	}
+	#logo {
+		a {
+		    background-image: url(/custom/content/themes/#{$theme-path}/Imagens/logo.png);
+		    background-repeat: no-repeat;
+		    display: block;
+		    width: 170px;
+		    height: 40px;
+		    font-size: 0;
+		}
+	}
 }
 .wrapper, .grid-products #middle, [class^="context-category"] #middle {
 	@include grid-container;
@@ -198,6 +205,9 @@ body {
 	}
 }
 @media screen and (max-width: ($wrapper - 1px)) {
+	#middle {
+		padding: 15px;
+	}
 	.wrapper, .grid-products #middle, [class^="context-category"] #middle {
 		@include wrapper-width(100%);
 	}	

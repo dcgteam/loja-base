@@ -4,51 +4,10 @@
 		display: none;
 	}
 	.content-header {
-		padding-right: 50px;
-		&:after {
-			content: '';
-			display: block;
-			width: 55px;
-			height: 1px;
-			background-color: $gray-semilight;
-			position: absolute;
-			right: 0;
-			top: 50%;
-		}
+		margin-bottom: 30px;
 		.title {
-			margin-right: 50px;
-			background:  lighten($cart-destaque, 60%);
 			color: $cart-destaque;
-		    float: left;
-		    padding: 1.6em;
-		    position: relative;
-		    z-index: 0;
-		    border: 1px solid;
-		    border-color: lighten($cart-destaque, 35%);
 		    font-size: 1.4em;
-		    &:after {
-		    	content: "";
-			    background: lighten($cart-destaque, 60%);
-			    position: absolute;
-			    border-radius: 10px;
-			    z-index: -2;
-			    top: 11px;
-			    right: -40px;
-			    width: 78px;
-			    height: 78px;
-			    -webkit-transform: rotate(45deg);
-			    -moz-transform: rotate(45deg);
-			    -ms-transform: rotate(45deg);
-			    -o-transform: rotate(45deg);
-			    transform: rotate(45deg);
-			    border: 1px solid;
-			    border-color: lighten($cart-destaque, 35%);
-			    border-width: 1px 1px 0 0;
-		    }
-		    .frase {
-		    	font-size: 0.6em;
-		    	display: block;
-		    }
 		}
 	}
 	ul {

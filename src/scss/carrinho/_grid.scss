@@ -41,6 +41,7 @@
 						@extend .alert;
 						@extend .warning;
 						@extend .small;
+						display: inline-block;
 					}
 				}
 				.is-gift.label {					
