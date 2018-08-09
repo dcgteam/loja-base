@@ -1,0 +1,38 @@
+.wd-checkout-basket >.empty, .ErrorRoute .error-404, .grid-empty .wd-browsing-grid-list {
+	background-color: #fff;
+	font-size: 1.5em;
+	text-align: center;
+	&:before {
+		content: ':(';
+		font-size: 4em;
+		display: block;
+		color: $base-color;
+	}
+	span, a {
+		display: block;
+		border: 0;
+		margin: 0;
+	}
+	span {
+		padding: 20px 0;
+	}
+}
+.ErrorRoute {
+	.wd-browsing-breadcrumbs {
+		display: none;
+	}
+	.error-404 {
+		padding-top: 30px;
+	}
+}
+.grid-empty {
+	.wd-browsing-grid-sorter {
+		display: none;
+	}
+	#content-wrapper {
+		margin: 0;
+	}
+	#showFacets {
+		display: none;
+	}
+}

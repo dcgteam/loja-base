@@ -73,6 +73,7 @@
 		line-height: normal !important;
 		max-width: 100%;
 	}
+
 	.banner-wrapper, a {
 		@include grid-media($grid-smartphone){
 			max-width: 100%; 
@@ -115,13 +116,15 @@
 		    }
 		}
 	}
-	
+	&:not(.menu-oferta) {
+		
 	img {
 		max-width: 100%;
 		height: auto;
 		@include grid-media($grid-smartphone){
 			width: 100%;
 		}
+	}
 	}
 	&.grid {
 		padding: 0;
