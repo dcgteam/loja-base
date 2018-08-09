@@ -1,0 +1,42 @@
+.AccountRegisterRoute {
+	.wd-profile-register {
+		.wd-header {
+			.wd-icon {
+				display: none;
+			}
+			.wd-title {
+				@extend h2;
+			}
+		}
+		.wd-subtitle {
+			@extend h3;
+		}
+		fieldset {
+			.input-wrapper:not(.customer-type-person) {
+				width: 49%;
+				float: left;
+				min-height: 90px;
+				&:nth-child(2n) {
+					float: right;
+				}
+				&.addorsetcustomer-name, &.addorsetcustomer-surname, &.input-wrapper-email {
+					width: 100%;
+				}
+				&.addorsetcustomer-gender, &.addorsetcustomer-birthdate, &.addorsetcustomer-cpf {
+					width: 33.33%;
+					float: left;
+				}
+				&.addorsetcustomer-gender, &.addorsetcustomer-cpf {
+					padding-left: 10px;
+				}
+				@include grid-media($grid-pp) {
+					width: 100% !important;
+					padding: 0 !important;
+				}
+			}
+		}
+		.bt-submit {
+			@extend .btn-wide;
+		}
+	}
+}

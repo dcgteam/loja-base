@@ -1,0 +1,19 @@
+.LoginRoute {
+	button[name="Login.Submit"], .recover-password-button  {
+		@extend .btn-wide;
+		margin: 20px auto;
+		display: block;
+	}
+	.js-login-recoverpassword {
+		display: block;
+		text-align: center;
+		margin: 0 auto 20px;
+	}
+	.register-now {
+		@extend .btn-outline;
+		max-width: 200px;
+		display: block;
+		text-align: center;
+		margin: 0 auto 20px;
+	}
+}

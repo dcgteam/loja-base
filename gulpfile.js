@@ -48,7 +48,7 @@ gulp.task('sass', function() {
         .src('./src/scss/**/*.scss')
         .pipe( connect.reload() )
         .pipe(plumber())
-        //.pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
             .pipe(sass(
                 { 
                     errLogToConsole: true,
@@ -57,7 +57,7 @@ gulp.task('sass', function() {
             ))
             //.pipe(rename({suffix: '.min'}))
             //.pipe(minifycss())
-        //.pipe(sourcemaps.write('./maps'))
+        .pipe(sourcemaps.write('./maps'))
 
 
         //.pipe( gulp.dest('./css') )

@@ -25,7 +25,6 @@ header {
 		.main-bar {
 			position: fixed;
 			top: 0;
-			background-color: #fff;
 			z-index: 55;
 		    width: 100%;
 		    box-shadow: 1px 1px 1px 1px $gray-semilight;
@@ -33,6 +32,10 @@ header {
 	}
 	.main-bar {
 		padding: 20px 0;
+		background: #fff;
+		&.simples {
+		    box-shadow: 1px 1px 1px 1px $gray-semilight;
+		}
 		.wd-search {
 			.input-wrapper {	
 				margin-bottom: 0;			

@@ -9,6 +9,7 @@
 	}
 	.all-category {
 		background-color: $darken-color;
+		position: initial;
 		.button-extend {
 			position: relative;
 			height: 100%;
@@ -39,7 +40,7 @@
 			min-height: 300px;
 		    background-color: #fff;
 		    position: absolute;
-		    width: $wrapper;
+		    width: 100%;
 		    left: 0;
 		    z-index: 100;
 		    overflow: hidden;
@@ -182,15 +183,5 @@
 	    	z-index: 2;
 	    	transition: all 0.3s cubic-bezier(0.4, 0.2, 0, 1) 0ms;
 	    }
-	}
-}
-@media screen and (max-width: 1078px) {
-	.day-offer {
-		display: none;
-	}
-}
-@media screen and (max-width: 992px) {
-	.category-bar {
-		display: none;
 	}
 }

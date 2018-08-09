@@ -2,6 +2,8 @@
 	padding: 0;
 	.wd-facet-group {
 		.facets {
+			background: #fff;
+			border: 0;
 			.facet-type {
 				.facet-type-list {
 					.facet-title {
@@ -106,6 +108,7 @@
 	}
 	#showFacets {
 		display: block;
+		width: 100%;
 		position: fixed;
 		bottom: 0;
 		right: 0;
@@ -117,6 +120,7 @@
 			@include aws-icon("\f0b0");
 		}
 		&.active {
+			width: 120px;
 			bottom: initial;
 			top: 0;
 			&:after {

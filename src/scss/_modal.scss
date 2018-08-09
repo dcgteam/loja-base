@@ -1,4 +1,5 @@
 .the-modal {
+	max-width: 300px;
 	.the-modal-container {
 		background: $font-light;
 	    height: 100%;
@@ -13,5 +14,24 @@
 	    	font-size: 1.3em;
 	    	padding: 15px 0;
 	    }
+		.btn {
+			margin-top: 10px;
+		}
+	}
+}
+.select-variation-modal, .wd-product-payment-options-modal, .wd-product-deliveryfee-modal, .schedule-shifts-modal {
+	.the-modal.opened {
+		max-width: 80%;
+		.the-modal-container, #iframe-modal {
+			min-height: 500px;
+		}
+	}
+}
+.checkout-basket-content-modal, .wd-profile-login-modal {
+	.the-modal.opened {
+		max-width: 500px;
+		.the-modal-container, #iframe-modal {
+			min-height: 200px;
+		}
 	}
 }
