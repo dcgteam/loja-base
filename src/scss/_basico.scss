@@ -71,6 +71,9 @@ body {
 		    vertical-align: top;
 		    font-size: 0.97em;
 		}
+		span.error {
+			display: none !important;
+		}
 	}
 	ul {
 		margin: 0;
@@ -157,8 +160,7 @@ body {
 			th {
 				text-transform: uppercase;
 				text-align: left;
-				font-size: 0.8em;
-				color: gray;
+				font-size: 0.9em;
 			}
 		}
 		tbody {

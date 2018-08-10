@@ -63,6 +63,11 @@
 			ul {
 				padding: 0;
 				li {
+					&.name {
+						.freeitem {
+							display: none;
+						}
+					}
 					.price {
 						font-weight: bold;
 						font-size: 1.2em;

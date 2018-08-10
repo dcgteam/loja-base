@@ -26,13 +26,10 @@
 	}
 }
 .grid-empty {
-	.wd-browsing-grid-sorter {
+	.wd-browsing-grid-sorter,#showFacets, #left {
 		display: none;
 	}
 	#content-wrapper {
 		margin: 0;
-	}
-	#showFacets {
-		display: none;
 	}
 }
