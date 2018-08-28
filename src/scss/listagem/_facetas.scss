@@ -4,6 +4,7 @@
 		.facets {
 			background: #fff;
 			border: 0;
+			@include round(0);
 			.facet-type {
 				.facet-type-list {
 					.facet-title {
@@ -60,6 +61,7 @@
 		.selected-facets {
 			background: $gray-extralight;
 			border: 0;
+			margin: 0;
 			@include round(2px);
 			&::before {
 				text-transform: uppercase;
@@ -68,6 +70,7 @@
 			.selected-facet {
 				border: 0;
 				border-bottom: 1px solid $gray-light;
+				margin: 0;
 				@include round(0);
 				&:last-child() {
 					border: 0;
@@ -120,14 +123,17 @@
 			@include aws-icon("\f0b0");
 		}
 		&.active {
-			width: 120px;
+			width: 80px;
 			bottom: initial;
 			top: 0;
+			background-color: transparent;
+			color: $font-dark;
 			&:after {
-				content: ' Fechar';
+				content: '';
 			}
 			.icon:before {
 				@include aws-icon("\f00d");
+				font-size: 2em;
 			}
 		}
 	}
