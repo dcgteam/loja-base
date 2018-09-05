@@ -1,0 +1,886 @@
+%box-painel {
+	//border: 1px solid #EDEDED;
+
+	background-color: #fff;
+	margin: 3px;
+	@media screen and (min-width: $breakpoint-mobile) {
+		padding: 25px;
+	}
+	@media screen and (max-width: $breakpoint-mobile) {
+		padding: 15px;
+	}
+}
+.area-profile {
+	.wd-checkout-ordersummary.short-mode,
+	.wd-checkout-basket-summary .wd-checkout-basket-summary,
+	.wd-checkout-orderdeliveryaddress,
+	.wd-checkout-orderpayment,
+	&.page-account-edit .wd-profile-register,
+	.wd-checkout-ordertracking-v2,
+	.wd-profile-orders,
+	.wd-profile-addresses,
+	.wd-profile-addressform,
+	.wd-profile-wishlist-form,
+	.wd-profile-wishlist-list,
+	.wd-profile-wishlist-manage,
+	.wd-profile-gift-certificate-list,
+	.wd-profile-files {
+		margin-bottom: 30px;
+		.wd-header {
+			padding: 10px 0;
+			//border-bottom: 1px solid #DDD;
+			.order-link {
+				display: none;
+			}
+			.wd-title {
+				margin-left: 3px;
+			}
+		}
+		.wd-content {
+			@extend %box-painel;
+		}
+	}
+
+	.panel-header {
+		h2 {
+			letter-spacing: -1px;
+			font-weight: 800;
+			padding-bottom: 10px;
+			color: $base-color;
+			border-bottom: 1px solid $lighten-color;
+		}
+	}
+
+	table {
+		width: 100%;
+	}
+
+	@media screen and (max-width: $breakpoint-mobile) {
+		table {
+			td {
+				font-size: 0.9em;
+			}
+		}
+	}
+
+	&.page-account-index {
+		.wd-checkout-ordersummary {
+			.wd-checkout-ordernumber {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+			.summary-data {
+				display: none;
+			}
+		}
+	}
+	&.page-account-orderdetail {
+		.wd-checkout-ordersummary {
+			.wd-checkout-ordernumber {
+				.order-link {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.wd-profile-addressform {
+		.wd-subtitle {
+			display: none;
+		}
+	}
+
+	.wd-profile-panelmenu {
+		.wd-header {
+			padding: 10px 0;
+			display: none;
+		}
+		nav {
+			ul {
+				li {
+					margin: 0;
+					padding: 0;
+					.sub-title {
+						display: none;
+					}
+					a {
+						padding: 15px 0;
+						display: block;
+
+					    border-bottom: 1px solid $gray-semilight;
+					    position: relative;
+					    display: block;
+					    cursor: pointer;
+
+					    &.current {
+					    	font-weight: bold;
+					    	border-bottom: 2px solid $base-color;
+					    }
+					}
+					&.sign-out {
+						a {
+							color: #999;
+							font-size: 0.9em;
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+		@media screen and (max-width: $breakpoint-mobile) {
+			margin: 20px 0 10px;
+			.row-menu {
+				border-bottom: 1px solid $gray-semilight;
+				a {
+					padding: 10px 0;
+					display: block;
+				}
+				.col-menu {
+					a {
+						&:after {
+							padding-left: 5px;
+							@include aws-icon('\f078');
+						}
+					}
+				}
+				.text-right {
+					text-align: right;
+				}
+				.text-center {
+					text-align: center;
+				}
+			}
+			.wd-header {
+				display: none;
+			}
+			nav {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				background-color: #fff;
+				transform: translateY(-150%);
+				transition: all .2s ease-in-out;
+				z-index: 2;
+				ul {
+					width: 100%;
+					//height: 0;
+					//visibility: hidden;
+					display: table;
+					margin: 0 auto;
+					overflow: hidden;
+					li {
+						text-align: center;
+					}
+				}
+			}
+
+			&.opened {
+				.row-menu {
+					.col-menu {
+						a {
+							&:after {
+								@include aws-icon('\f077');
+							}
+						}
+					}
+				}
+				nav {
+					//height: auto;
+					transform: translateY(0%);
+					ul {
+						//height: auto;
+						//visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	.wd-profile-register {
+		.wd-subtitle {
+			display: none;
+		}
+	}
+	.wd-checkout-orderpayment {
+		.wd-content {
+			@extend .row;
+			.payment-method,
+			.status {
+				@extend .col-lg-6!optional;
+			}
+			.status {
+				//text-align: center;
+				b {
+					display: block;
+				}
+			}
+		}
+	}
+	.wd-checkout-orderdeliveryaddress {
+		.content {
+			br {
+				display: none;
+			}
+			b {
+				display: block;
+			}
+		}
+	}
+	.wd-profile-addresses {
+		.wd-header {
+			overflow: hidden;
+			.new-address {
+				float: right;
+			}
+		}
+		.wd-content {
+			@media screen and (max-width: $breakpoint-mobile) {
+				table {
+					thead {
+						th {
+							&:nth-child(3),
+							&:nth-child(4) {
+								display: none;
+							}
+						}
+					}
+					tbody {
+						td {
+							&:nth-child(3),
+							&:nth-child(4) {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			table {
+				tbody {
+					td {
+						&.action {
+							padding-left: 10px!important;
+							button {
+								&[title="Editar"],
+								&.delete,
+								&.set-main-address {
+									font-size: 0;
+									&:before {
+						    			font-size: 14px;
+						    			padding: 10px;
+						    		}
+								}
+								&[title="Editar"] {
+									&:before {
+						    			@include aws-icon('\f044');
+						    		}
+								}
+								&.delete {
+									&:before {
+						    			@include aws-icon('\f2ed');
+						    		}
+								}
+								&.set-main-address {
+									&:before {
+						    			@include aws-icon('\f005');
+						    		}
+								}
+							}
+							.main-address-label {
+								font-size: 0;
+								&:before {
+									@extend .btn !optional;
+									font-size: 14px;
+						    		padding: 10px;
+					    			@include aws-icon('\f005');
+					    			color: yellow;
+					    		}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.wd-checkout-ordersummary {
+		.wd-checkout-basket-summary {
+			margin-bottom: 30px;
+			.wd-subtitle {
+				display: none;
+			}
+		}
+		.wd-header {
+			padding: 10px 0;
+			//border-bottom: 1px solid #DDD;
+		}
+	}
+	.wd-checkout-basket-summary {
+		.see-products {
+			display: none;
+		}
+		.grid {
+			@extend %box-painel;
+			table {
+				margin-top: 0!important;
+				display: table!important;
+				width: 100%;
+				.item-subtotal,
+				.price {
+					del {
+						display: block;
+						font-size: 0.9em;
+						color: #999;
+					}
+				}
+				.price {
+					display: table-cell!important;
+				}
+				@media screen and (max-width: $breakpoint-mobile) {
+					thead {
+						display: none;
+						th {
+							&:nth-child(3),
+							&:nth-child(4),
+							&:nth-child(5) {
+								display: none!important;
+							}
+							&:nth-child(1) {
+								width: 90px;
+							}
+						}
+					}
+					tbody {
+						tr {
+							td {
+								&.quantity,
+								&.price,
+								&.item-subtotal {
+									display: none!important;
+								}
+								&.product-image {
+									img {
+										margin-right: 10px;
+										max-width: 60px;
+									}
+								}
+							}
+						}
+					}
+					tfoot {
+						display: none;
+					}
+				}
+				tfoot {
+					tr {
+						&.total {
+							td {
+								text-align: center;
+								font-weight: 800;
+								font-size: 1.2em;
+							}
+						}
+					}
+				}
+			}
+			.total-sm {
+				text-align: right;
+				font-size: 0.9em;
+			}
+		}
+		.wd-checkout-basket-summary {
+		}
+	}
+
+	.wd-checkout-ordernumber {
+		float: none;
+		text-align: left;
+		padding: 0 0 20px 0;
+		border-bottom: 1px solid $gray-light;
+		width: 100%;
+
+		.btn {
+			@include button(normal, 1px);
+		}
+		.order-legend,
+		.order-code {
+			text-align: left;
+			padding: 0;
+		}
+		.order-legend, .order-code {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.order-code {
+			line-height: inherit;
+			margin-left: 10px;
+		}
+		.col-order-number,
+		.col-status {
+			//line-height: 30px;
+		}
+		.col-order-number {
+			font-size: 0;
+			strong {
+				font-size: 18px;
+				margin-left: 10px;
+				display: block;
+				font-weight: 800;
+				&:before {
+					content: 'Número do pedido:';
+					font-weight: normal;
+					font-size: 12px;
+					display: block;
+					line-height: 18px;
+				}
+			}
+		}
+		.col-status {
+			font-size: 18px;
+			font-weight: 800;
+			//text-align: center;
+			.order-status {
+				&:before {
+					content: 'Situação do pedido:';
+					font-weight: normal;
+					font-size: 12px;
+					display: block;
+					line-height: 18px;
+				}
+			}
+		}
+		.order-description {
+			display: none;
+		}
+		.order-link {
+			float: right;
+		}
+		@media screen and (max-width: $breakpoint-mobile) {
+			.col-order-number,
+			.col-status {
+				text-align: center;
+			}
+			.col-status {
+				margin: 10px 0;
+			}
+			.order-link {
+				float: none;
+				display: table;
+				margin: 0 auto;
+			}
+		}
+	}
+	.wd-checkout-ordersummary {
+		&.short-mode {
+			.wd-header {
+				.order-link {
+					display: none;
+				}
+			}
+			.wd-content {
+				.summary-data {
+					margin-left: 0;
+				}
+				.summary-data {
+					.wd-subtitle {
+						display: none;
+					}
+					ul.labels {
+						float: none;
+						font-weight: normal!important;
+						li {
+							height: inherit;
+							line-height: inherit;
+							&.payment {
+								img {
+									display: none;
+								}
+							}
+							&.subtotal {
+								display: none;
+							}
+						}
+					}
+
+					.payment-data {
+						.deposit-wrapper {
+							margin-top: 0;
+						}
+					}
+				}
+				.col-link {
+					a.order-link {
+						display: table;
+						margin: 0 auto;
+					}
+				}
+				@media screen and (max-width: $breakpoint-mobile) {
+					.summary-data {
+						.labels {
+							strong {
+								display: block;
+							}
+						}
+						.payment-data .deposit-wrapper .data,
+						.payment-data .deposit-wrapper .action {
+							width: 100%;
+							float: none;
+						}
+						.payment-data .deposit-wrapper .action {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.wd-profile-orders {
+		table {
+			width: 100%;
+		}
+		@media screen and (max-width: $breakpoint-mobile) {
+			table {
+				.action {
+					width: auto;
+				}
+				tbody {
+					td {
+						&.action {
+							button {
+								font-size: 0;
+								&:before {
+					    			font-size: 14px;
+					    			padding: 10px;
+						    		@include aws-icon('\f002');
+					    		}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.wd-checkout-ordertracking-v2 {
+		.wd-content {
+			.title {
+				display: none;
+			}
+		}
+		.value {
+			//display: table;
+			//margin: 0 auto;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				padding: 10px 0;
+				small {
+					width: 100%;
+					max-width: 150px;
+					display: inline-block;
+					text-align: center;
+				}
+				&.completed {
+					.line {
+						&:before {
+							background-color: $base-color;
+						}
+					}
+				}
+				&.started {
+					.line {
+						&:before {
+							background-color: white;
+						}
+					}
+				}
+
+				.line {
+					display: inline-block;
+					margin-left: 10px;
+					margin-right: 10px;
+					position: relative;
+					&:before {
+						content: '';
+						width: 10px;
+						height: 10px;
+						display: inline-block;
+						
+						border-radius: 50%;
+					}
+				}
+				&:not(:last-child) {
+					.line {
+						&:after {
+							content: '';
+							position: absolute;
+							border: 2px solid rgba($base-color,0.5);
+							height: 34px;
+							left: 3px;
+							bottom: -33px;
+						}
+					}
+				}
+			}
+		}
+		@media screen and (max-width: $breakpoint-mobile) {
+			ul {
+				font-size: 0.9em;
+				li {
+					small {
+						max-width: 120px;
+					}
+				}
+			}
+		}
+	}
+
+	.wd-profile-reorder {
+		display: none;
+	}
+
+	/**
+	 * lista de desejos
+	 */
+	.wd-profile-wishlist-form {
+		.input-wrapper {
+			//width: 49%;
+			//float: left;
+			//min-height: 65px;
+			margin-bottom: 30px;
+			&:nth-child(2n) {
+				//float: right;
+			}
+			&.addorsetcustomer-name, &.addorsetcustomer-surname, &.input-wrapper-email {
+				width: 100%;
+			}
+			&.addorsetcustomer-gender, &.addorsetcustomer-birthdate, &.addorsetcustomer-cpf {
+				width: 33.33%;
+				float: left;
+			}
+			&.addorsetcustomer-gender, &.addorsetcustomer-cpf {
+				padding-left: 10px;
+			}
+			@include grid-media($grid-pp) {
+				width: 100% !important;
+				padding: 0 !important;
+			}
+			input[type="text"],
+			select,
+			textarea {
+				width: 100%;
+			}
+			textarea {
+				min-height: 120px;
+			}
+			label {
+				display: block;
+				float: none;
+			}
+		}
+		label[for="use-address"] {
+			float: none;
+			display: inline-block;
+		}
+		#use-address {
+			top: 9px;
+			//left: 0px;
+			float: left;
+		}
+		#addresses-list {
+			clear: both;
+			margin-top: 20px!important;
+		}
+	}
+	.wd-profile-wishlist-list {
+		.wd-header {
+			overflow: hidden;
+			.new-wishlist {
+				float: right;
+			}
+		}
+		table {
+			width: 100%;
+			button {
+				&.manage,
+				&.delete {
+					font-size: 0;
+					&:before {
+		    			font-size: 14px;
+		    			padding: 10px;
+		    		}
+				}
+				&.manage {
+					&:before {
+		    			@include aws-icon('\f044');
+		    		}
+				}
+				&.delete {
+					&:before {
+		    			@include aws-icon('\f2ed');
+		    		}
+				}
+			}
+		}
+	}
+	.wd-profile-wishlist-manage {
+		.wd-profile-wishlist-form {
+			@extend .row;
+			.wd-profile-wishlist-form {
+				@extend .col-lg-8 !optional;
+				.new-list {
+					width: 100%;
+				}
+			}
+			.form-wrapper {
+				@extend .col-lg-4 !optional;
+				#FormImageUpload {
+					&:before {
+						content: 'Imagem da lista';
+						font-weight: bold;
+					}
+				}
+				.photo-uploaded {
+					float: none;
+					text-align: left;
+					margin: 10px 0;
+				}
+				.photo-form {
+					position: inherit;
+					margin: 0;
+					height: auto;
+					//text-align: center;
+					.button-select-file {
+						width: 70%;
+						//margin: 0 auto 10px;
+						.title {
+							//@extend button;
+						}
+						small {
+							/*
+							display: block;
+							position: absolute;
+							top: 30px;
+							left: 0;
+							width: 100%;
+							text-align: center;
+							*/
+						}
+					}
+				}
+			}
+		}
+		.tabs-list {
+			padding-left: 20px;
+			padding-right: 20px;
+			border-bottom: 1px solid $gray-semilight;
+			li {
+				border-top: 1px solid $gray-semilight;
+				border-right: 1px solid $gray-semilight;
+				border-left: 1px solid $gray-semilight;
+				position: relative;
+				
+				margin-right: -1px;
+				width: calc(100%/3);
+				margin-bottom: -1px;
+				&:not(.active) {
+					//border-bottom: 1px solid #CCC;
+				}
+				&.active {
+					//background-color: white;
+					a {
+						//padding-bottom: 1px;
+					}
+					z-index: 1;
+				}
+			}
+		}
+		.contents-list {
+			.manage-products {
+				.wishlist-manager-data {
+					.wishlist-manager-pager {
+						text-align: center;
+						.description {
+							.pagination,
+							.product-count {
+								float: none;
+								display: inline-block;
+							}
+						}
+					}
+				}
+				a {
+					&.link {
+						font-weight: normal;
+						vertical-align: middle;
+						img {
+							max-width: 120px;
+						}
+					}
+				}
+				h3 {
+					font-size: inherit;
+					font-weight: normal;
+				}
+				.sale-price {
+					font-size: 12px;
+					span {
+					}
+				}
+				.wishlist-col-action {
+					.quantity {
+						.title {
+							font-size: 12px;
+						}
+					}
+					button {
+
+					}
+				}
+			}
+			.delete-list {
+				text-align: center;
+				.wishlist-name {
+					font-weight: bold;
+					&:after {
+						content: '?';
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * vales-compra
+	 */
+	 .wd-profile-gift-certificate-list {
+	 	table {
+	 		width: 100%;
+	 		@media screen and (max-width: $breakpoint-mobile) {
+				thead th:nth-child(3),
+				tbody th:nth-child(3) {
+					display: none;
+				}
+	 		}
+	 		tbody {
+	 			tr {
+	 				&.isactive {
+							
+	 				}
+	 				td {
+	 					button {
+							font-size: 0;
+							&:before {
+				    			font-size: 14px;
+				    			padding: 10px;
+					    		@include aws-icon('\f0fe');
+							}
+	 					}
+	 				}
+	 			}
+	 		}
+	 	}
+	 }
+}
