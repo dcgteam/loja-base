@@ -3,6 +3,7 @@
 
 	background-color: #fff;
 	margin: 3px;
+	box-shadow: 1px 1px 1px 1px $gray-medium;
 	@media screen and (min-width: $breakpoint-mobile) {
 		padding: 25px;
 	}
@@ -100,13 +101,9 @@
 				li {
 					margin: 0;
 					padding: 0;
-					.sub-title {
-						display: none;
-					}
 					a {
 						padding: 15px 0;
 						display: block;
-
 					    border-bottom: 1px solid $gray-semilight;
 					    position: relative;
 					    display: block;
@@ -157,7 +154,8 @@
 				position: absolute;
 				width: 100%;
 				left: 0;
-				background-color: #fff;
+				background-color: #fff;				
+				box-shadow: 0 20px 10px -7px rgba(0,0,0,0.2);
 				transform: translateY(-150%);
 				transition: all .2s ease-in-out;
 				z-index: 2;
@@ -608,6 +606,7 @@
 						display: inline-block;
 						
 						border-radius: 50%;
+						box-shadow: 0 0 0px 3px rgba($base-color,0.5);
 					}
 				}
 				&:not(:last-child) {
@@ -774,11 +773,11 @@
 		.tabs-list {
 			padding-left: 20px;
 			padding-right: 20px;
-			border-bottom: 1px solid $gray-semilight;
+			border-bottom: 1px solid #CCC;
 			li {
-				border-top: 1px solid $gray-semilight;
-				border-right: 1px solid $gray-semilight;
-				border-left: 1px solid $gray-semilight;
+				border-top: 1px solid #CCC;
+				border-right: 1px solid #CCC;
+				border-left: 1px solid #CCC;
 				position: relative;
 				
 				margin-right: -1px;

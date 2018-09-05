@@ -1,0 +1,39 @@
+@import './bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+
+@import 'configs';
+body.EasyCheckoutStep {
+   .wd-easy-checkout {
+       .header {
+           .logo {
+               background-image: url('/Custom/Content/Themes/#{$theme-path}/Imagens/logo.png')!important;
+               background-size: contain;
+               height: 45px;
+               background-position: left center;
+           }
+       }
+       .btn-outline {
+          color: $base-color;
+          .badge {
+            background-color: $base-color;
+          }
+       }
+   }
+   button:not(.btn-outline),
+   a.btn:not(.btn-outline) {
+      background-color: $base-color!important;
+      background-image: linear-gradient($base-color, shade($base-color, 30%));
+      color: $font-light;
+      
+   }
+   .btn-show-basket,
+   a,
+   #summary .safe-message {
+      color: $base-color;
+   }
+   #ezcommerce {
+    background-image: url('/Custom/Content/Themes/#{$theme-path}/Imagens/core.png');
+    width: 124px;
+    height: 31px;
+   }
+}
