@@ -185,8 +185,14 @@ body {
 	.hide {
 		display: none;
 	}
-	&.columns-2-left #content-wrapper {
-		margin-right: 0;
+	&.columns-2-left {
+		#content {
+			@include minus($wrapper,180px);
+			clear: none;
+			#content-wrapper {
+				margin: 0;
+			}
+		}
 	}
 	#logo {
 		h1 {

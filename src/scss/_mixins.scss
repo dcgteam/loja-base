@@ -33,6 +33,11 @@
   width: $width;
 }
 
+@mixin minus($fullWidth, $sub) {
+  $width : $fullWidth - $sub;
+  width: $width;
+}
+
 // gera icone usando FontAwesome
 // necessario inserir dentro de um pseudoelemento
 @mixin aws-icon($icon, $weight : bold) {
