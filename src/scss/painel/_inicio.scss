@@ -104,9 +104,7 @@
 					a {
 						padding: 15px 0;
 						display: block;
-
-					    border-bottom: 1px solid #dfdfdf;
-					    background-color: transparent;
+					    border-bottom: 1px solid $gray-semilight;
 					    position: relative;
 					    display: block;
 					    cursor: pointer;
@@ -129,7 +127,7 @@
 		@media screen and (max-width: $breakpoint-mobile) {
 			margin: 20px 0 10px;
 			.row-menu {
-				border-bottom: 1px solid #DDD;
+				border-bottom: 1px solid $gray-semilight;
 				a {
 					padding: 10px 0;
 					display: block;
@@ -142,6 +140,12 @@
 						}
 					}
 				}
+				.text-right {
+					text-align: right;
+				}
+				.text-center {
+					text-align: center;
+				}
 			}
 			.wd-header {
 				display: none;
@@ -150,10 +154,11 @@
 				position: absolute;
 				width: 100%;
 				left: 0;
-				background-color: #FFF;
-				//transform: translateY(-150%);
-				transition: all .2s ease-in-out;
+				background-color: #fff;				
 				box-shadow: 0 20px 10px -7px rgba(0,0,0,0.2);
+				transform: translateY(-150%);
+				transition: all .2s ease-in-out;
+				z-index: 2;
 				ul {
 					width: 100%;
 					//height: 0;
@@ -179,7 +184,7 @@
 				}
 				nav {
 					//height: auto;
-					//transform: translateY(0%);
+					transform: translateY(0%);
 					ul {
 						//height: auto;
 						//visibility: visible;
@@ -387,16 +392,20 @@
 		float: none;
 		text-align: left;
 		padding: 0 0 20px 0;
-		border-bottom: 1px solid #EEE;
+		border-bottom: 1px solid $gray-light;
 		width: 100%;
 
+		.btn {
+			@include button(normal, 1px);
+		}
 		.order-legend,
 		.order-code {
 			text-align: left;
 			padding: 0;
 		}
-		.order-legend {
-			float: left;
+		.order-legend, .order-code {
+			display: inline-block;
+			vertical-align: middle;
 		}
 		.order-code {
 			line-height: inherit;
@@ -782,7 +791,6 @@
 					a {
 						//padding-bottom: 1px;
 					}
-					box-shadow: 0 10px 10px 0 rgba(black, 0.2);
 					z-index: 1;
 				}
 			}
