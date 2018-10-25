@@ -59,7 +59,7 @@ Informe a URL do arquivo css que deseja que seja incluído a sua página (por ex
 Agora acesse a página que deseja injetar o css e clique na extensão CSS Inject, com isso, o arquivo será incluído no head e os estilos serão aplicados. Deverá aparecer o título "on" sobre o ícone indicando que a ferramenta está ativa.
 
 ## Live Reload
-Esta aplicação utiliza o Live Reload, ele é uma ferramenta excelente para testes locais. O Live Reload é uma extensão para Chrome que monitora mudanças em arquivos. Assim que você salva um arquivo css ou imagem dentro da pasta do seu projeto, o browser é atualizado.<br />
+Esta aplicação utiliza o Live Reload, ele é uma ferramenta excelente para testes locais. O Live Reload é uma extensão para Chrome que monitora mudanças em arquivos. Assim que você salva um arquivo css ou imagem dentro da pasta do seu projeto, o browser é atualizado.
 
 Faça a instalação da extensão em https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei. Após instalada, o ícone  ficará disponível na sua barra de ferramentas.
 
@@ -72,7 +72,7 @@ Para ativar o Live Reload, basta clicar no ícone. Quando o círculo central est
 
 ### Algumas dicas:
 - *_configs.scss*: contém as configurações padrões do projeto, tais como cores, fontes, tamanho do wrapper e etc. Utilize este arquivo para adicionar variáveis para serem utilizadas no projeto. Lembre-se de colocar na variável $theme-path o nome da pasta do tema que estás estilizando na loja.
-- *_fontes*: neste arquivo ficam os comandos @font-face referentes as fontes usadas no projeto. Lembre-se que pode-se usar o arquivo *_config* para criar uma variável com a fonte padrão, por exemplo.
+- *_fontes*: neste arquivo ficam os comandos @font-face referentes as fontes usadas no projeto. Lembre-se que pode-se usar o arquivo *_config* para criar uma variável para as fontes.
 - *_mixins*: contém diretivas para agilizar a estilização de alguns elementos, como, por exemplo, arredondamento e geração de ícones da FontAwesome. Recomendamos a leitura da documentação do Sass para maiores detalhes sobre seu uso e recursos.
 - Para testar imagens localmente, recomendamos que crie um diretório com o mesmo caminho que seria utilizado na loja. Exemplo: */Custom/Content/Themes/NOMEDOTEMA/Imagens*
 
