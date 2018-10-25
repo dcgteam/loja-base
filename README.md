@@ -1,4 +1,4 @@
-#Tema Base - Plataforma Core
+# Tema Base - Plataforma Core
 Neste projeto você irá encontrar as folhas de estilo para estilizar sua loja a partir do tema Base da plataforma Core.
 
 ## Recursos Necessários
